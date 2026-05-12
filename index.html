@@ -12,6 +12,13 @@
 <meta name="author" content="Bc. Lenka Hanáčková — Maderoterapie UH">
 <link rel="canonical" href="https://endospheres.maderoterapieuh.cz/">
 
+<!-- ─── SEO: Geo / Local ─── -->
+<meta name="geo.region" content="CZ-ZL">
+<meta name="geo.placename" content="Uherské Hradiště">
+<meta name="geo.position" content="49.0693;17.4604">
+<meta name="ICBM" content="49.0693, 17.4604">
+<meta name="theme-color" content="#313D30">
+
 <!-- ─── SEO: Open Graph ─── -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
@@ -19,6 +26,7 @@
 <meta property="og:description" content="Italská kompresní mikrovibrace. Drenáž, redukce celulitidy, tvarování těla — bez bolesti, bez modřin. 97,8 % spokojených klientek. Studio Šestý smysl, Uherské Hradiště.">
 <meta property="og:url" content="https://endospheres.maderoterapieuh.cz/">
 <meta property="og:image" content="https://endospheres.maderoterapieuh.cz/assets/og-image.png">
+<meta property="og:image:alt" content="Endospheres Therapy Essenza — Maderoterapie UH, Uherské Hradiště">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Maderoterapie UH">
@@ -58,6 +66,28 @@
         "@type": "GeoCoordinates",
         "latitude": "49.0693",
         "longitude": "17.4604"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": [
+        {"@type": "City", "name": "Uherské Hradiště"},
+        {"@type": "City", "name": "Staré Město"},
+        {"@type": "City", "name": "Kunovice"},
+        {"@type": "City", "name": "Uherský Brod"},
+        {"@type": "City", "name": "Slovácko"}
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "2",
+        "bestRating": "5",
+        "worstRating": "1"
       },
       "sameAs": [
         "https://maderoterapieuh.cz",
@@ -162,18 +192,33 @@
           "item": "https://endospheres.maderoterapieuh.cz/"
         }
       ]
+    },
+    {
+      "@type": "Review",
+      "reviewBody": "Po druhém sezení Endospheres jsem viděla rozdíl na stehnech. Lenka je profesionálka, vysvětlí každý krok a je s ní krásně.",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "author": {"@type": "Person", "name": "Markéta H."},
+      "itemReviewed": {"@id": "https://endospheres.maderoterapieuh.cz/#studio"}
+    },
+    {
+      "@type": "Review",
+      "reviewBody": "Bála jsem se bolesti — naprosto zbytečně. Endospheres Essenza je příjemné a po sezení mám pocit, že jsem spala 12 hodin.",
+      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+      "author": {"@type": "Person", "name": "Tereza K."},
+      "itemReviewed": {"@id": "https://endospheres.maderoterapieuh.cz/#studio"}
     }
   ]
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-
+<link rel="preload" as="image" href="assets/lymfomodeling-photo.webp" fetchpriority="high">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 
 <style>
+@font-face{font-family:'Cormorant Garamond';src:url('fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Cormorant Garamond';src:url('fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:'Jost';src:url('fonts/Jost-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Jost';src:url('fonts/Jost-Italic-VariableFont_wght.ttf') format('truetype');font-weight:100 900;font-style:italic;font-display:swap}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
 --white:#fff;--cream:#F8F7F2;--pale:#EEEADE;--mist:#D8D4C5;
