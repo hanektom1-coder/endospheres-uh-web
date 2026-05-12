@@ -201,9 +201,9 @@ a{color:inherit}
 .hd-phone svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2}
 .hd-book{background:var(--forest);color:#fff;padding:.55rem 1.25rem;border-radius:50px;font-size:.78rem;font-weight:500;letter-spacing:.04em;text-decoration:none;transition:.25s var(--ease)}
 .hd-book:hover{background:var(--deep);transform:translateY(-1px)}
-@media(max-width:900px){.hd-nav,.hd-phone,.hd-book{display:none}.hd-hbg{display:flex}.hd-in{grid-template-columns:1fr auto;padding:0 1.2rem}}
 .hd-hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
 .hd-hbg span{display:block;width:22px;height:1.5px;background:var(--ink);transition:.32s var(--ease)}
+@media(max-width:900px){.hd-nav,.hd-phone,.hd-book{display:none}.hd-hbg{display:flex}.hd-in{grid-template-columns:1fr auto;padding:0 1.2rem}}
 .hd-drawer{display:none;position:fixed;inset:0;z-index:980;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;gap:.5rem}
 .hd-drawer.open{display:flex}
 .hd-drawer-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--ink);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
@@ -340,7 +340,7 @@ a{color:inherit}
 .pricing-note{padding:1.2rem 1.4rem;background:#fff;border-radius:8px;border:1px solid var(--mist);font-size:.8rem;color:#6a6a58;line-height:1.7;font-weight:300}
 .pricing-note strong{color:var(--gold);font-weight:500}
 .plans{display:flex;flex-direction:column;gap:1rem}
-.plan{background:#fff;border:1px solid var(--mist);border-radius:10px;padding:2rem 2.2rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:center;transition:.32s var(--ease)}
+.plan{background:#fff;border:1px solid var(--mist);border-radius:10px;padding:2rem 2.2rem;display:grid;grid-template-columns:1fr auto;gap:1.6rem;align-items:center;transition:.32s var(--ease)}
 .plan:hover{background:var(--forest);color:#fff;border-color:transparent;box-shadow:0 8px 26px rgba(28,37,25,.07)}
 .plan-pic{width:72px;height:72px;border-radius:50%;background:var(--pale);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1.7rem;font-style:italic;font-weight:400;color:var(--gold)}
 .plan:hover .plan-pic{background:rgba(168,144,58,.15);color:var(--warm)}
@@ -496,7 +496,6 @@ a{color:inherit}
     <div class="method-grid">
       <div>
         <p class="eyebrow">Metoda</p>
-        <div class="method-num">01<span>O technologii</span></div>
       </div>
       <div class="method-body">
         <h2 class="h2" id="metoda-nadpis" style="margin-bottom:1.6rem">Endospheres Essenza není <em>masáž</em> ve smyslu, jak ji znáte.</h2>
@@ -546,49 +545,42 @@ a{color:inherit}
   </div>
   <div class="bene-grid">
     <article class="b b1">
-      <div class="b-num">i.</div>
       <div>
         <h3 class="b-name">Lymfa se <em>probouzí</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Aktivace povrchového i hlubokého lymfatického systému urychluje odvod tekutin, redukci otoků a detoxikaci tkání.</p>
       </div>
     </article>
     <article class="b b2">
-      <div class="b-num">ii.</div>
       <div>
         <h3 class="b-name">Celulitida <em>ustupuje</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Mikrovibrace rozbíjí fibrózní vlákna, uvolňuje tukové uzly. Pokožka získává pružnost — bez agresivního tlaku.</p>
       </div>
     </article>
     <article class="b b3">
-      <div class="b-num">iii.</div>
       <div>
         <h3 class="b-name">Bez <em>bolesti</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Sféry se dotýkají, netlačí. Většina klientek během sezení usíná.</p>
       </div>
     </article>
     <article class="b b4">
-      <div class="b-num">iv.</div>
       <div>
         <h3 class="b-name">Pevnější <em>kontury</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Stehna, hýždě, paže, břicho. Tvarování těla bez chirurgie.</p>
       </div>
     </article>
     <article class="b b5">
-      <div class="b-num">v.</div>
       <div>
         <h3 class="b-name">Úleva od <em>napětí</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Hluboká vibrace uvolňuje svalové bloky a urychluje regeneraci po sportu i náročném dni.</p>
       </div>
     </article>
     <article class="b b6">
-      <div class="b-num">vi.</div>
       <div>
         <h3 class="b-name">Lepší <em>prokrvení</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Mikrocirkulace, výživa tkání, odvod toxinů — efekt přetrvává hodiny po sezení.</p>
       </div>
     </article>
     <article class="b b7">
-      <div class="b-num">vii.</div>
       <div>
         <h3 class="b-name">A nakonec — <em>klid</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Hodina, kterou si dáte sama sobě. To je důvod, proč většina klientek přichází znovu.</p>
@@ -641,32 +633,26 @@ a{color:inherit}
     </div>
     <div class="plans">
       <div class="plan">
-        <div class="plan-pic">i.</div>
         <div class="plan-body"><div class="plan-n">Jedno sezení</div><div class="plan-s">55 minut · jedna partie těla</div></div>
         <div class="plan-pr"><div class="plan-pr-v">2 100 Kč</div><div class="plan-pr-l">/ sezení</div></div>
       </div>
       <div class="plan feature">
-        <div class="plan-pic">ii.</div>
         <div class="plan-body"><div class="plan-n">Celé tělo</div><div class="plan-s">75 minut · komplexní ošetření Essenza</div></div>
         <div class="plan-pr"><div class="plan-pr-v">2 850 Kč</div><div class="plan-pr-l">/ sezení</div></div>
       </div>
       <div class="plan">
-        <div class="plan-pic">iii.</div>
         <div class="plan-body"><div class="plan-n">Balíček <em style="font-size:1.2em">6</em> sezení</div><div class="plan-s">úspora 10 % · platnost 12 týdnů</div></div>
         <div class="plan-pr"><div class="plan-pr-v">11 350 Kč</div><div class="plan-pr-l">série</div></div>
       </div>
       <div class="plan">
-        <div class="plan-pic">iv.</div>
         <div class="plan-body"><div class="plan-n">Balíček <em>10</em> sezení</div><div class="plan-s">úspora 15 % · doporučeno pro celulitidu</div></div>
         <div class="plan-pr"><div class="plan-pr-v">17 850 Kč</div><div class="plan-pr-l">série</div></div>
       </div>
       <div class="plan">
-        <div class="plan-pic">v.</div>
         <div class="plan-body"><div class="plan-n">Endospheres + Maderoterapie</div><div class="plan-s">90 minut · vlajkový rituál studia</div></div>
         <div class="plan-pr"><div class="plan-pr-v">2 950 Kč</div><div class="plan-pr-l">/ sezení</div></div>
       </div>
       <div class="plan">
-        <div class="plan-pic">vi.</div>
         <div class="plan-body"><div class="plan-n">Dárkový poukaz</div><div class="plan-s">na libovolnou hodnotu nebo proceduru</div></div>
         <div class="plan-pr"><div class="plan-pr-v">od 850</div><div class="plan-pr-l">Kč</div></div>
       </div>
