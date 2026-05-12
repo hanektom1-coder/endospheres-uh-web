@@ -226,8 +226,8 @@ a{color:inherit}
 .btn-link{color:var(--ink);font-size:.82rem;letter-spacing:.06em;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .2rem;border-bottom:1px solid var(--ink);transition:.25s var(--ease)}
 .btn-link:hover{color:var(--gold);border-color:var(--gold);gap:.8rem}
 .hero-meta{margin-top:3.2rem;display:flex;gap:2.6rem;padding-top:2rem;border-top:1px solid var(--mist)}
-.hero-meta-v{font-family:var(--fd);font-size:1.9rem;font-weight:400;color:var(--ink);line-height:1}
-.hero-meta-v em{font-style:italic;color:var(--gold);font-weight:300}
+.hero-meta-v{font-family:var(--fd);font-size:1.1rem;font-weight:400;color:var(--ink);line-height:1}
+.hero-meta-v em{font-style:italic;color:var(--gold);font-weight:300;font-size:2.6em}
 .hero-meta-l{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);margin-top:.4rem;font-weight:400}
 .hero-vis{position:relative;aspect-ratio:4/5;max-height:640px}
 .hero-vis-img{position:absolute;inset:0;border-radius:6px 90px 6px 6px;overflow:hidden;background:var(--mist)}
@@ -292,7 +292,7 @@ a{color:inherit}
 .bene-grid{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;grid-auto-rows:200px}
 .b{background:#fff;border:1px solid var(--mist);border-radius:8px;padding:1.8rem;display:flex;flex-direction:column;justify-content:space-between;transition:.32s var(--ease);position:relative;overflow:hidden}
 .b:hover{border-color:var(--gold);box-shadow:0 10px 32px rgba(28,37,25,.08);transform:translateY(-2px)}
-.b-num{font-family:var(--fd);font-style:italic;font-size:1.05rem;color:var(--gold);font-weight:400}
+.b-num{font-family:var(--fd);font-style:italic;font-size:.8rem;color:var(--gold);font-weight:300;letter-spacing:.08em;margin-bottom:.55rem;opacity:.85}
 .b-name{font-family:var(--fd);font-size:1.55rem;font-weight:400;line-height:1.2;color:var(--ink)}
 .b-name em{font-style:italic;color:var(--gold)}
 .b-desc{font-size:.82rem;color:#6a6a58;line-height:1.65;font-weight:300}
@@ -392,6 +392,23 @@ a{color:inherit}
 .btn-g:hover{background:var(--gold-d);transform:translateY(-2px);box-shadow:0 10px 28px rgba(168,144,58,.3)}
 .book-or{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.3);font-weight:400}
 
+/* ─── CONTACT ─── */
+.contact{background:var(--cream);padding:7rem 2rem;border-top:1px solid var(--mist)}
+.contact-in{max-width:1100px;margin:0 auto}
+.contact-head{margin-bottom:3.5rem}
+.contact-grid{display:grid;grid-template-columns:5fr 6fr;gap:5rem;align-items:start}
+.ci-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.3rem}
+.ci{display:flex;gap:1rem;align-items:flex-start}
+.ci-icon{width:38px;height:38px;background:#fff;border:1px solid var(--mist);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-icon svg{width:15px;height:15px;fill:none;stroke:var(--forest);stroke-width:1.5}
+.ci-lbl{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--stone);margin-bottom:2px}
+.ci-val{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;transition:color .2s}
+.ci-val:hover{color:var(--forest)}
+.ci-sub{font-size:.73rem;color:var(--stone);font-weight:300;margin-top:1px}
+.map-box{border-radius:9px;overflow:hidden;border:1px solid var(--mist)}
+.map-box iframe{display:block;width:100%;height:420px;border:none}
+@media(max-width:980px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}.map-box iframe{height:300px}}
+
 /* ─── FOOTER ─── */
 .ft{background:var(--cream);color:var(--stone);padding:4rem 2rem 2rem;border-top:1px solid var(--mist)}
 .ft-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.6rem;border-bottom:1px solid var(--mist)}
@@ -409,7 +426,8 @@ a{color:inherit}
 .ft-bot a:hover{color:var(--gold)}
 @media(max-width:768px){.ft-in{grid-template-columns:1fr 1fr;gap:2rem}}
 @media(max-width:980px){.section,.bene,.ritual,.pricing,.faq,.reviews,.book{padding:4rem 1.5rem}.spheres{padding:4rem 1.5rem}.ritual-head{margin-bottom:2.5rem;gap:1.5rem}.pricing-side p{margin-bottom:1rem}}
-@media(max-width:600px){.ft-in{grid-template-columns:1fr}.ft-bot{flex-direction:column;text-align:center}.plan{padding:1.4rem 1.2rem}.hero-actions{flex-direction:column;align-items:flex-start}.btn{width:100%;justify-content:center}.btn-link{align-self:center}.reviews-in{gap:1.5rem}.book-row{flex-direction:column;align-items:center}.hero-meta{gap:0;justify-content:space-between;align-items:flex-start}.hero-meta>div{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center}.hero-meta-v{font-size:2.2rem}.hero-meta-l{font-size:.6rem}}
+@media(max-width:600px){.ft-in{grid-template-columns:1fr}.ft-bot{flex-direction:column;text-align:center}.plan{padding:1.4rem 1.2rem}.hero-actions{flex-direction:column;align-items:flex-start}.btn{width:100%;justify-content:center}.btn-link{align-self:center}.reviews-in{gap:1.5rem}.book-row{flex-direction:column;align-items:center}.hero-meta{flex-direction:column;gap:1.2rem;border-top:none;padding-top:1.2rem;margin-top:2rem}.hero-meta>div{display:flex;align-items:baseline;gap:.7rem;opacity:0;transform:translateY(12px);animation:statIn .5s var(--ease) forwards}.hero-meta>div:nth-child(1){animation-delay:.1s}.hero-meta>div:nth-child(2){animation-delay:.28s}.hero-meta>div:nth-child(3){animation-delay:.46s}.hero-meta-v{font-size:1.1rem}.hero-meta-l{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--stone)}}
+@keyframes statIn{to{opacity:1;transform:translateY(0)}}
 
 /* ─── FAB ─── */
 .fab{position:fixed;bottom:1.6rem;right:1.6rem;z-index:80;background:var(--forest);color:#fff;padding:.78rem 1.4rem;border-radius:50px;text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;display:flex;align-items:center;gap:.55rem;box-shadow:0 12px 30px rgba(34,45,33,.4);transition:.32s var(--ease)}
@@ -432,6 +450,7 @@ a{color:inherit}
       <a href="#ritual">Rituál</a>
       <a href="#cenik">Ceník</a>
       <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
     <div class="hd-cta">
       <a class="hd-phone" href="tel:+420776323427" aria-label="Zavolat: 776 323 427">
@@ -451,6 +470,7 @@ a{color:inherit}
   <a href="#ritual">Rituál</a>
   <a href="#cenik">Ceník</a>
   <a href="#faq">FAQ</a>
+  <a href="#kontakt">Kontakt</a>
   <a href="https://rezervace.maderoterapieuh.cz" rel="noopener" class="d-cta">Rezervovat online</a>
 </div>
 
@@ -546,42 +566,49 @@ a{color:inherit}
   <div class="bene-grid">
     <article class="b b1">
       <div>
+        <div class="b-num">01</div>
         <h3 class="b-name">Lymfa se <em>probouzí</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Aktivace povrchového i hlubokého lymfatického systému urychluje odvod tekutin, redukci otoků a detoxikaci tkání.</p>
       </div>
     </article>
     <article class="b b2">
       <div>
+        <div class="b-num">02</div>
         <h3 class="b-name">Celulitida <em>ustupuje</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Mikrovibrace rozbíjí fibrózní vlákna, uvolňuje tukové uzly. Pokožka získává pružnost — bez agresivního tlaku.</p>
       </div>
     </article>
     <article class="b b3">
       <div>
+        <div class="b-num">03</div>
         <h3 class="b-name">Bez <em>bolesti</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Sféry se dotýkají, netlačí. Většina klientek během sezení usíná.</p>
       </div>
     </article>
     <article class="b b4">
       <div>
+        <div class="b-num">04</div>
         <h3 class="b-name">Pevnější <em>kontury</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Stehna, hýždě, paže, břicho. Tvarování těla bez chirurgie.</p>
       </div>
     </article>
     <article class="b b5">
       <div>
+        <div class="b-num">05</div>
         <h3 class="b-name">Úleva od <em>napětí</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Hluboká vibrace uvolňuje svalové bloky a urychluje regeneraci po sportu i náročném dni.</p>
       </div>
     </article>
     <article class="b b6">
       <div>
+        <div class="b-num">06</div>
         <h3 class="b-name">Lepší <em>prokrvení</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Mikrocirkulace, výživa tkání, odvod toxinů — efekt přetrvává hodiny po sezení.</p>
       </div>
     </article>
     <article class="b b7">
       <div>
+        <div class="b-num">07</div>
         <h3 class="b-name">A nakonec — <em>klid</em></h3>
         <p class="b-desc" style="margin-top:.6rem">Hodina, kterou si dáte sama sobě. To je důvod, proč většina klientek přichází znovu.</p>
       </div>
@@ -728,6 +755,80 @@ a{color:inherit}
   </div>
 </section>
 
+<!-- CONTACT -->
+<section class="contact" id="kontakt" aria-labelledby="kontakt-nadpis">
+  <div class="contact-in">
+    <div class="contact-head">
+      <div class="eyebrow"><span class="eyebrow-line"></span>Kontakt<span class="eyebrow-line"></span></div>
+      <h2 id="kontakt-nadpis">Najdete nás v centru <em>Uherského Hradiště</em>.</h2>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <p style="font-size:.9rem;line-height:1.8;color:var(--stone);font-weight:300;max-width:380px">Rádi odpovíme na vaše dotazy a pomůžeme s výběrem správného ošetření. Napište, zavolejte nebo se objednejte online.</p>
+        <div class="ci-list">
+          <div class="ci">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="ci-lbl">Adresa</div>
+              <a class="ci-val" href="https://maps.google.com/?q=Hradební+1543,+686+01+Uherské+Hradiště" rel="noopener" target="_blank">Hradební 1543, 686 01 Uherské Hradiště</a>
+              <div class="ci-sub">Studio Šestý smysl · 1. patro</div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </div>
+            <div>
+              <div class="ci-lbl">Telefon</div>
+              <a class="ci-val" href="tel:+420776323427">+420 776 323 427</a>
+              <div class="ci-sub">Po–Pá 9–18 hod</div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div>
+              <div class="ci-lbl">E-mail</div>
+              <a class="ci-val" href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </div>
+            <div>
+              <div class="ci-lbl">Instagram</div>
+              <a class="ci-val" href="https://www.instagram.com/maderoterapieuh" rel="noopener" target="_blank">@maderoterapieuh</a>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <div class="ci-lbl">IČO</div>
+              <div class="ci-val">17569041</div>
+              <div class="ci-sub">Bc. Lenka Hanáčková</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-box">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.3!2d17.4580!3d49.0693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713ef3d3b3b3b3b%3A0x1!2sHradební+1543%2C+686+01+Uherské+Hradiště!5e0!3m2!1scs!2scz!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Studio Šestý smysl — mapa"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- FOOTER -->
@@ -753,6 +854,7 @@ a{color:inherit}
         <li><a href="#ritual">Průběh sezení</a></li>
         <li><a href="#cenik">Ceník</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </div>
     <div>
