@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ochrana osobních údajů | Endospheres Essenza — Maderoterapie UH</title>
+<meta name="description" content="Zásady ochrany osobních údajů – Endospheres Essenza, Maderoterapie UH, Bc. Lenka Hanáčková.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://endospheres.maderoterapieuh.cz/ochrana-osobnich-udaju.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta name="theme-color" content="#1C2519">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --white:    #FFFFFF;
+  --off:      #F8F7F2;
+  --pale:     #EEEADE;
+  --mist:     #D8D4C5;
+  --gold:     #A8903A;
+  --gold-d:   #8A7430;
+  --forest:   #313D30;
+  --ink:      #1C2519;
+  --stone:    #7A7A68;
+  --warm:     #C8C1A8;
+  --fd: 'Cormorant Garamond', Georgia, serif;
+  --fu: 'Jost', system-ui, sans-serif;
+  --ease: cubic-bezier(.25,.46,.45,.94);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--fu); background: var(--white); color: var(--ink); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+/* NAV */
+.nav-wrap { position: sticky; top: 0; z-index: 900; background: rgba(255,255,255,.97); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(49,61,48,.08); box-shadow: 0 2px 20px rgba(28,37,25,.08); }
+.nav { max-width: 100%; margin: 0; padding: 0 2.5rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { text-decoration: none; display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
+.nav-logo-mark { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; }
+.nav-logo-mark img { width: 44px; height: 44px; object-fit: cover; border-radius: 50%; }
+.nav-logo-name { font-family: var(--fd); font-size: 1.05rem; font-weight: 500; color: var(--ink); line-height: 1; letter-spacing: .05em; }
+.nav-logo-sub { font-size: .6rem; font-weight: 400; color: var(--stone); letter-spacing: .12em; margin-top: 2px; }
+.nav-back { display: flex; align-items: center; gap: .4rem; font-size: .79rem; color: var(--stone); text-decoration: none; transition: color .2s; }
+.nav-back:hover { color: var(--gold); }
+.nav-back svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
+
+/* CONTENT */
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+.page-hero { background: var(--off); padding: 4rem 0 3rem; border-bottom: 1px solid var(--mist); }
+.page-hero .wrap { display: flex; flex-direction: column; gap: .75rem; }
+.page-hero-label { font-size: .68rem; text-transform: uppercase; letter-spacing: .2em; color: var(--gold); font-weight: 500; }
+.page-hero h1 { font-family: var(--fd); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 400; color: var(--ink); line-height: 1.15; }
+.page-hero p { font-size: .88rem; color: var(--stone); max-width: 600px; line-height: 1.7; }
+
+.content { padding: 4rem 0 5rem; }
+.content-inner { max-width: 800px; }
+.content h2 { font-family: var(--fd); font-size: 1.6rem; font-weight: 500; color: var(--ink); margin: 2.5rem 0 .75rem; padding-bottom: .5rem; border-bottom: 1px solid var(--mist); }
+.content h2:first-child { margin-top: 0; }
+.content h3 { font-size: 1rem; font-weight: 500; color: var(--forest); margin: 1.5rem 0 .5rem; }
+.content p { font-size: .88rem; line-height: 1.85; color: #3a3a2a; margin-bottom: .8rem; }
+.content ul, .content ol { padding-left: 1.5rem; margin-bottom: .8rem; }
+.content li { font-size: .88rem; line-height: 1.85; color: #3a3a2a; margin-bottom: .3rem; }
+.content a { color: var(--gold-d); text-decoration: underline; text-underline-offset: 3px; }
+.content a:hover { color: var(--gold); }
+.content strong { font-weight: 500; color: var(--ink); }
+.info-box { background: var(--off); border-left: 3px solid var(--gold); padding: 1.2rem 1.5rem; border-radius: 0 6px 6px 0; margin: 1.5rem 0; }
+.info-box p { margin: 0; }
+
+/* FOOTER */
+footer { background: var(--off); border-top: 1px solid var(--mist); padding: 3.5rem 2rem 2rem; }
+.ft-in { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 2.6rem; border-bottom: 1px solid var(--mist); }
+.ft-brand { display: flex; align-items: center; gap: .7rem; margin-bottom: 1rem; }
+.ft-brand img { width: 34px; height: 34px; border-radius: 50%; }
+.ft-bn { font-family: var(--fd); font-size: 1rem; font-weight: 500; color: var(--ink); letter-spacing: .04em; }
+.ft-bs { font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-top: 3px; font-weight: 500; }
+.ft-d { font-size: .82rem; line-height: 1.7; color: var(--stone); font-weight: 300; max-width: 300px; }
+.ft-h { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; font-weight: 500; }
+.ft-l { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+.ft-l a { color: #5a5a48; text-decoration: none; font-size: .84rem; font-weight: 300; transition: color .2s; }
+.ft-l a:hover { color: var(--gold); }
+.ft-bot { max-width: 1320px; margin: 1.4rem auto 0; display: flex; justify-content: space-between; font-size: .74rem; color: var(--stone); flex-wrap: wrap; gap: 1rem; }
+.ft-bot a { color: var(--stone); text-decoration: none; }
+.ft-bot a:hover { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .ft-in { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .nav { padding: 0 1.2rem; }
+  .page-hero { padding: 2.5rem 0 2rem; }
+  .content { padding: 2.5rem 0 3.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark"><img src="assets/logo-hires.png" alt="Endospheres Maderoterapie UH logo"></div>
+      <div>
+        <div class="nav-logo-name">Endospheres</div>
+        <div class="nav-logo-sub">Maderoterapie UH</div>
+      </div>
+    </a>
+    <a href="/" class="nav-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Zpět na hlavní stránku
+    </a>
+  </nav>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="wrap">
+    <div class="page-hero-label">Právní dokumenty</div>
+    <h1>Ochrana osobních údajů</h1>
+    <p>Zásady zpracování a ochrany osobních údajů v souladu s nařízením GDPR (EU) 2016/679. Poslední aktualizace: duben 2026.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<section class="content">
+  <div class="wrap">
+    <div class="content-inner">
+
+      <div class="info-box">
+        <p><strong>Správce osobních údajů:</strong> Bc. Lenka Hanáčková, IČO: 03348041, Na Vyhlídce 1698, 686 05 Uherské Hradiště. Kontakt: <a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a>, tel. <a href="tel:+420776323427">+420 776 323 427</a>.</p>
+      </div>
+
+      <h2>1. Úvod</h2>
+      <p>Ochrana vašich osobních údajů je pro mě důležitá. Tyto zásady popisují, jaké osobní údaje shromažďuji, jak je používám, komu je předávám a jaká máte práva v souvislosti s jejich zpracováním.</p>
+      <p>Zpracování osobních údajů provádím v souladu s Nařízením Evropského parlamentu a Rady (EU) 2016/679 (GDPR) a zákonem č. 110/2019 Sb., o zpracování osobních údajů.</p>
+
+      <h2>2. Jaké osobní údaje zpracovávám</h2>
+      <h3>Rezervace</h3>
+      <ul>
+        <li>Jméno a příjmení</li>
+        <li>E-mailová adresa</li>
+        <li>Telefonní číslo</li>
+        <li>Zvolená procedura a termín</li>
+      </ul>
+      <h3>Zdravotní informace (při konzultaci)</h3>
+      <ul>
+        <li>Relevantní zdravotní stav a kontraindikace</li>
+        <li>Tyto údaje zpracovávám pouze na základě vašeho výslovného souhlasu a slouží výhradně k bezpečnému poskytnutí procedury.</li>
+      </ul>
+      <h3>Technické údaje webu</h3>
+      <ul>
+        <li>IP adresa a informace o zařízení (prostřednictvím analytických nástrojů)</li>
+        <li>Cookies – viz samostatné <a href="/cookies.html">Zásady cookies</a></li>
+      </ul>
+
+      <h2>3. Účel a právní základ zpracování</h2>
+      <p>Osobní údaje zpracovávám na základě těchto právních základů:</p>
+      <ul>
+        <li><strong>Plnění smlouvy</strong> (čl. 6 odst. 1 písm. b) GDPR) – vyřízení rezervace a poskytnutí sjednané služby.</li>
+        <li><strong>Oprávněný zájem</strong> (čl. 6 odst. 1 písm. f) GDPR) – ochrana před podvody, zlepšování nabídky služeb.</li>
+        <li><strong>Souhlas</strong> (čl. 6 odst. 1 písm. a) GDPR) – zpracování zdravotních údajů.</li>
+        <li><strong>Plnění právní povinnosti</strong> (čl. 6 odst. 1 písm. c) GDPR) – účetní a daňová evidence.</li>
+      </ul>
+
+      <h2>4. Doba uchovávání údajů</h2>
+      <ul>
+        <li>Údaje z rezervací: <strong>3 roky</strong> od poslední poskytnuté služby.</li>
+        <li>Účetní a daňové doklady: <strong>10 let</strong> dle zákonné povinnosti.</li>
+        <li>Údaje zpracovávané na základě souhlasu: do odvolání souhlasu.</li>
+      </ul>
+
+      <h2>5. Příjemci osobních údajů</h2>
+      <p>Vaše osobní údaje neprodávám ani neposkytují třetím stranám za účelem marketingu. Údaje mohou být předány pouze:</p>
+      <ul>
+        <li><strong>Rezervační systém</strong> – pro správu online rezervací na rezervace.maderoterapieuh.cz.</li>
+        <li><strong>Poskytovatel e-mailových služeb</strong> – Gmail (Google LLC) pro příjem a odesílání e-mailů.</li>
+        <li><strong>Účetní / daňový poradce</strong> – na základě smlouvy o zpracování osobních údajů.</li>
+        <li><strong>Orgány veřejné moci</strong> – pokud to vyžaduje zákon.</li>
+      </ul>
+      <p>Přenos dat mimo EU: Google LLC přenáší data do USA na základě standardních smluvních doložek schválených Evropskou komisí.</p>
+
+      <h2>6. Vaše práva</h2>
+      <p>Jako subjekt údajů máte následující práva:</p>
+      <ul>
+        <li><strong>Právo na přístup</strong> – právo získat potvrzení, zda zpracovávám vaše osobní údaje, a přístup k nim.</li>
+        <li><strong>Právo na opravu</strong> – právo na opravu nepřesných nebo doplnění neúplných údajů.</li>
+        <li><strong>Právo na výmaz</strong> – právo na výmaz údajů, pokud pominul účel zpracování nebo odvoláte souhlas.</li>
+        <li><strong>Právo na omezení zpracování</strong> – právo požadovat omezení zpracování v zákonem stanovených případech.</li>
+        <li><strong>Právo na přenositelnost</strong> – právo obdržet údaje v strukturovaném, strojově čitelném formátu.</li>
+        <li><strong>Právo vznést námitku</strong> – právo vznést námitku proti zpracování na základě oprávněného zájmu.</li>
+        <li><strong>Právo odvolat souhlas</strong> – souhlas lze kdykoli odvolat, aniž by tím byla dotčena zákonnost předchozího zpracování.</li>
+      </ul>
+      <p>Svá práva můžete uplatnit e-mailem na <a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a> nebo písemně na adresu provozovny. Na vaši žádost odpovím nejpozději do 30 dnů.</p>
+
+      <h2>7. Právo podat stížnost</h2>
+      <p>Pokud se domníváte, že zpracování vašich osobních údajů porušuje GDPR, máte právo podat stížnost u dozorového úřadu:</p>
+      <p><strong>Úřad pro ochranu osobních údajů (ÚOOÚ)</strong><br>
+      Pplk. Sochora 27, 170 00 Praha 7<br>
+      Web: <a href="https://www.uoou.cz" target="_blank" rel="noopener">www.uoou.cz</a></p>
+
+      <h2>8. Zabezpečení údajů</h2>
+      <p>Přijímám přiměřená technická a organizační opatření k ochraně vašich osobních údajů před neoprávněným přístupem, ztrátou nebo zneužitím. Webové stránky jsou provozovány s platným SSL certifikátem (šifrované připojení HTTPS).</p>
+
+      <h2>9. Změny zásad</h2>
+      <p>Tyto zásady mohu průběžně aktualizovat. Datum poslední aktualizace je uveden v záhlaví tohoto dokumentu.</p>
+
+      <h2>10. Kontakt</h2>
+      <p>V případě jakýchkoli dotazů týkajících se ochrany osobních údajů mě prosím kontaktujte:</p>
+      <ul>
+        <li>E-mail: <a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a></li>
+        <li>Telefon: <a href="tel:+420776323427">+420 776 323 427</a></li>
+        <li>Adresa: Na Vyhlídce 1698, 686 05 Uherské Hradiště</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-in">
+    <div>
+      <div class="ft-brand">
+        <img src="assets/logo-hires.png" alt="Maderoterapie UH" width="34" height="34">
+        <div><div class="ft-bn">Endospheres</div><div class="ft-bs">Maderoterapie UH</div></div>
+      </div>
+      <address class="ft-d" style="font-style:normal">
+        Italská kompresní mikrovibrace Essenza.<br>
+        Studio Šestý smysl, Hradební 1543,<br>
+        686 01 Uherské Hradiště.<br>
+        Bc. Lenka Hanáčková.
+      </address>
+    </div>
+    <div>
+      <div class="ft-h">Sekce</div>
+      <ul class="ft-l">
+        <li><a href="/#metoda">Metoda Essenza</a></li>
+        <li><a href="/#prinosy">Přínosy</a></li>
+        <li><a href="/#ritual">Průběh sezení</a></li>
+        <li><a href="/#cenik">Ceník</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-h">Kontakt</div>
+      <ul class="ft-l">
+        <li><a href="tel:+420776323427">+420 776 323 427</a></li>
+        <li><a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a></li>
+        <li><a href="https://maps.google.com/?q=Hradební+1543,+Uherské+Hradiště" rel="noopener">Hradební 1543, UH</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-h">Studio</div>
+      <ul class="ft-l">
+        <li><a href="https://maderoterapieuh.cz">maderoterapieuh.cz</a></li>
+        <li><a href="https://rezervace.maderoterapieuh.cz" rel="noopener">Online rezervace</a></li>
+        <li><a href="https://www.instagram.com/maderoterapieuh" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <div>© 2026 Maderoterapie UH · Bc. Lenka Hanáčková</div>
+    <div><a href="/cookies.html">Cookies</a> · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

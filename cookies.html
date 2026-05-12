@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookies | Endospheres Essenza — Maderoterapie UH</title>
+<meta name="description" content="Zásady používání cookies a ochrana soukromí na webu Endospheres Essenza, Maderoterapie UH.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://endospheres.maderoterapieuh.cz/cookies.html">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta name="theme-color" content="#1C2519">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --white:    #FFFFFF;
+  --off:      #F8F7F2;
+  --pale:     #EEEADE;
+  --mist:     #D8D4C5;
+  --gold:     #A8903A;
+  --gold-d:   #8A7430;
+  --forest:   #313D30;
+  --ink:      #1C2519;
+  --stone:    #7A7A68;
+  --warm:     #C8C1A8;
+  --fd: 'Cormorant Garamond', Georgia, serif;
+  --fu: 'Jost', system-ui, sans-serif;
+  --ease: cubic-bezier(.25,.46,.45,.94);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--fu); background: var(--white); color: var(--ink); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+/* NAV */
+.nav-wrap { position: sticky; top: 0; z-index: 900; background: rgba(255,255,255,.97); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(49,61,48,.08); box-shadow: 0 2px 20px rgba(28,37,25,.08); }
+.nav { max-width: 100%; margin: 0; padding: 0 2.5rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { text-decoration: none; display: flex; align-items: center; gap: 11px; flex-shrink: 0; }
+.nav-logo-mark { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; }
+.nav-logo-mark img { width: 44px; height: 44px; object-fit: cover; border-radius: 50%; }
+.nav-logo-name { font-family: var(--fd); font-size: 1.05rem; font-weight: 500; color: var(--ink); line-height: 1; letter-spacing: .05em; }
+.nav-logo-sub { font-size: .6rem; font-weight: 400; color: var(--stone); letter-spacing: .12em; margin-top: 2px; }
+.nav-back { display: flex; align-items: center; gap: .4rem; font-size: .79rem; color: var(--stone); text-decoration: none; transition: color .2s; }
+.nav-back:hover { color: var(--gold); }
+.nav-back svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
+
+/* CONTENT */
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
+.page-hero { background: var(--off); padding: 4rem 0 3rem; border-bottom: 1px solid var(--mist); }
+.page-hero .wrap { display: flex; flex-direction: column; gap: .75rem; }
+.page-hero-label { font-size: .68rem; text-transform: uppercase; letter-spacing: .2em; color: var(--gold); font-weight: 500; }
+.page-hero h1 { font-family: var(--fd); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 400; color: var(--ink); line-height: 1.15; }
+.page-hero p { font-size: .88rem; color: var(--stone); max-width: 600px; line-height: 1.7; }
+
+.content { padding: 4rem 0 5rem; }
+.content-inner { max-width: 800px; }
+.content h2 { font-family: var(--fd); font-size: 1.6rem; font-weight: 500; color: var(--ink); margin: 2.5rem 0 .75rem; padding-bottom: .5rem; border-bottom: 1px solid var(--mist); }
+.content h2:first-child { margin-top: 0; }
+.content h3 { font-size: 1rem; font-weight: 500; color: var(--forest); margin: 1.5rem 0 .5rem; }
+.content p { font-size: .88rem; line-height: 1.85; color: #3a3a2a; margin-bottom: .8rem; }
+.content ul, .content ol { padding-left: 1.5rem; margin-bottom: .8rem; }
+.content li { font-size: .88rem; line-height: 1.85; color: #3a3a2a; margin-bottom: .3rem; }
+.content a { color: var(--gold-d); text-decoration: underline; text-underline-offset: 3px; }
+.content a:hover { color: var(--gold); }
+.content strong { font-weight: 500; color: var(--ink); }
+.info-box { background: var(--off); border-left: 3px solid var(--gold); padding: 1.2rem 1.5rem; border-radius: 0 6px 6px 0; margin: 1.5rem 0; }
+.info-box p { margin: 0; }
+.cookie-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .83rem; }
+.cookie-table th { background: var(--forest); color: #fff; padding: .6rem 1rem; text-align: left; font-weight: 500; font-size: .75rem; letter-spacing: .08em; }
+.cookie-table td { padding: .6rem 1rem; border-bottom: 1px solid var(--pale); vertical-align: top; }
+.cookie-table tr:last-child td { border-bottom: none; }
+.cookie-table code { background: var(--pale); padding: .1rem .4rem; border-radius: 3px; font-size: .8rem; }
+
+/* FOOTER */
+footer { background: var(--off); border-top: 1px solid var(--mist); padding: 3.5rem 2rem 2rem; }
+.ft-in { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 2.6rem; border-bottom: 1px solid var(--mist); }
+.ft-brand { display: flex; align-items: center; gap: .7rem; margin-bottom: 1rem; }
+.ft-brand img { width: 34px; height: 34px; border-radius: 50%; }
+.ft-bn { font-family: var(--fd); font-size: 1rem; font-weight: 500; color: var(--ink); letter-spacing: .04em; }
+.ft-bs { font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-top: 3px; font-weight: 500; }
+.ft-d { font-size: .82rem; line-height: 1.7; color: var(--stone); font-weight: 300; max-width: 300px; }
+.ft-h { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; font-weight: 500; }
+.ft-l { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+.ft-l a { color: #5a5a48; text-decoration: none; font-size: .84rem; font-weight: 300; transition: color .2s; }
+.ft-l a:hover { color: var(--gold); }
+.ft-bot { max-width: 1320px; margin: 1.4rem auto 0; display: flex; justify-content: space-between; font-size: .74rem; color: var(--stone); flex-wrap: wrap; gap: 1rem; }
+.ft-bot a { color: var(--stone); text-decoration: none; }
+.ft-bot a:hover { color: var(--gold); }
+
+@media (max-width: 768px) {
+  .ft-in { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .nav { padding: 0 1.2rem; }
+  .page-hero { padding: 2.5rem 0 2rem; }
+  .content { padding: 2.5rem 0 3.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark"><img src="assets/logo-hires.png" alt="Endospheres Maderoterapie UH logo"></div>
+      <div>
+        <div class="nav-logo-name">Endospheres</div>
+        <div class="nav-logo-sub">Maderoterapie UH</div>
+      </div>
+    </a>
+    <a href="/" class="nav-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Zpět na hlavní stránku
+    </a>
+  </nav>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="wrap">
+    <div class="page-hero-label">Právní dokumenty</div>
+    <h1>Cookies</h1>
+    <p>Informace o používání cookies a ochraně soukromí na webu Endospheres Essenza — Maderoterapie UH. Poslední aktualizace: duben 2026.</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<section class="content">
+  <div class="wrap">
+    <div class="content-inner">
+
+      <h2>1. Kdo jsme</h2>
+      <p>Provozovatelem tohoto webu je <strong>Bc. Lenka Hanáčková</strong>, poskytovatelka wellness služeb pod značkou Maderoterapie UH, se sídlem Na Vyhlídce 1698, 686 05 Uherské Hradiště. IČO: 03348041. Kontakt: <a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a></p>
+
+      <h2>2. Co jsou cookies</h2>
+      <p>Cookies jsou malé textové soubory, které webová stránka ukládá do vašeho prohlížeče při návštěvě. Slouží k tomu, aby si stránka zapamatovala vaše preference, nebo nám pomáhaly lépe porozumět tomu, jak stránky používáte.</p>
+
+      <h2>3. Jaké cookies používáme</h2>
+
+      <h3>Nezbytné cookies</h3>
+      <p>Tyto cookies jsou nutné pro základní funkci webu. Nelze je odmítnout, protože bez nich by web nefungoval správně.</p>
+      <table class="cookie-table">
+        <thead><tr><th>Název</th><th>Účel</th><th>Platnost</th></tr></thead>
+        <tbody>
+          <tr><td><code>cookie_consent</code></td><td>Uchovává vaši volbu ohledně analytických cookies</td><td>1 rok</td></tr>
+          <tr><td><code>cookie_consent_date</code></td><td>Datum udělení nebo odmítnutí souhlasu</td><td>1 rok</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Analytické cookies (Google Analytics) — pouze se souhlasem</h3>
+      <p>Pokud udělíte souhlas, používáme Google Analytics 4 (Google LLC) ke statistické analýze návštěvnosti. Data jsou anonymizována a nejsou sdílena s třetími stranami pro reklamní účely.</p>
+      <table class="cookie-table">
+        <thead><tr><th>Název</th><th>Účel</th><th>Platnost</th></tr></thead>
+        <tbody>
+          <tr><td><code>_ga</code></td><td>Rozlišení jednotlivých uživatelů</td><td>2 roky</td></tr>
+          <tr><td><code>_ga_*</code></td><td>Uchování stavu relace</td><td>2 roky</td></tr>
+        </tbody>
+      </table>
+      <p>Více informací: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+
+      <h2>4. Správa vašeho souhlasu</h2>
+      <p>Svůj souhlas s analytickými cookies můžete kdykoli změnit kliknutím na tlačítka níže.</p>
+      <div class="info-box">
+        <p><strong>Vaše aktuální nastavení cookies</strong><br>Analytické cookies jsou aktivovány pouze s vaším souhlasem. Nezbytné cookies jsou vždy aktivní.</p>
+        <div style="display:flex;gap:.75rem;margin-top:1rem;flex-wrap:wrap;">
+          <button onclick="updateConsent('accept')" style="background:var(--forest);color:#fff;border:none;padding:.6rem 1.2rem;border-radius:50px;font-family:var(--fu);font-size:.82rem;cursor:pointer;">Přijmout analytické cookies</button>
+          <button onclick="updateConsent('reject')" style="background:transparent;color:var(--stone);border:1px solid var(--mist);padding:.6rem 1.2rem;border-radius:50px;font-family:var(--fu);font-size:.82rem;cursor:pointer;">Odmítnout analytické cookies</button>
+        </div>
+        <p id="consent-status" style="margin-top:.75rem;font-size:.82rem;color:var(--stone);"></p>
+      </div>
+
+      <h2>5. Zpracování osobních údajů</h2>
+      <p>Tento web neshromažďuje osobní údaje jinak než prostřednictvím rezervačního systému.</p>
+      <ul>
+        <li>Jméno, e-mail a telefon z rezervačního systému slouží výhradně pro potvrzení a správu termínů.</li>
+        <li>Osobní údaje nejsou předávány třetím stranám pro marketingové účely.</li>
+        <li>Údaje uchováváme po dobu nezbytně nutnou k naplnění účelu jejich zpracování.</li>
+      </ul>
+
+      <h2>6. Vaše práva</h2>
+      <p>V souladu s nařízením GDPR máte právo na přístup, opravu, výmaz, omezení zpracování, přenositelnost údajů a právo vznést námitku. Pro uplatnění těchto práv nás kontaktujte na <a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a>. Máte také právo podat stížnost u <a href="https://www.uoou.cz" target="_blank" rel="noopener">Úřadu pro ochranu osobních údajů</a>.</p>
+
+      <h2>7. Správa cookies v prohlížeči</h2>
+      <p>Cookies lze spravovat také přímo v nastavení vašeho prohlížeče:</p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+        <li><a href="https://support.mozilla.org/cs/kb/povoleni-zakazani-cookies" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+        <li><a href="https://support.apple.com/cs-cz/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+        <li><a href="https://support.microsoft.com/cs-cz/windows/odstran%C4%9Bn%C3%AD-a-spr%C3%A1va-soubor%C5%AF-cookie-v-aplikaci-microsoft-edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
+      </ul>
+
+      <h2>8. Změny těchto zásad</h2>
+      <p>Tyto zásady mohou být příležitostně aktualizovány. Datum poslední aktualizace: <strong>duben 2026</strong>.</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-in">
+    <div>
+      <div class="ft-brand">
+        <img src="assets/logo-hires.png" alt="Maderoterapie UH" width="34" height="34">
+        <div><div class="ft-bn">Endospheres</div><div class="ft-bs">Maderoterapie UH</div></div>
+      </div>
+      <address class="ft-d" style="font-style:normal">
+        Italská kompresní mikrovibrace Essenza.<br>
+        Studio Šestý smysl, Hradební 1543,<br>
+        686 01 Uherské Hradiště.<br>
+        Bc. Lenka Hanáčková.
+      </address>
+    </div>
+    <div>
+      <div class="ft-h">Sekce</div>
+      <ul class="ft-l">
+        <li><a href="/#metoda">Metoda Essenza</a></li>
+        <li><a href="/#prinosy">Přínosy</a></li>
+        <li><a href="/#ritual">Průběh sezení</a></li>
+        <li><a href="/#cenik">Ceník</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-h">Kontakt</div>
+      <ul class="ft-l">
+        <li><a href="tel:+420776323427">+420 776 323 427</a></li>
+        <li><a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a></li>
+        <li><a href="https://maps.google.com/?q=Hradební+1543,+Uherské+Hradiště" rel="noopener">Hradební 1543, UH</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="ft-h">Studio</div>
+      <ul class="ft-l">
+        <li><a href="https://maderoterapieuh.cz">maderoterapieuh.cz</a></li>
+        <li><a href="https://rezervace.maderoterapieuh.cz" rel="noopener">Online rezervace</a></li>
+        <li><a href="https://www.instagram.com/maderoterapieuh" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <div>© 2026 Maderoterapie UH · Bc. Lenka Hanáčková</div>
+    <div><a href="/cookies.html">Cookies</a> · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></div>
+  </div>
+</footer>
+
+<script>
+function updateConsent(choice) {
+  localStorage.setItem("cookie_consent", choice);
+  localStorage.setItem("cookie_consent_date", new Date().toISOString());
+  var s = document.getElementById("consent-status");
+  if (s) s.textContent = choice === "accept" ? "Analytické cookies byly přijaty." : "Analytické cookies byly odmítnuty.";
+}
+</script>
+</body>
+</html>
