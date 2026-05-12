@@ -211,7 +211,7 @@
 }
 </script>
 
-<link rel="preload" as="image" href="assets/lymfomodeling-photo.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/endospheres-osetreni-telo.png" fetchpriority="high">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 
 <style>
@@ -295,6 +295,8 @@ a{color:inherit}
 /* ─── METHOD ─── */
 .method{background:#fff;border-top:1px solid var(--mist)}
 .method-grid{display:grid;grid-template-columns:5fr 7fr;gap:6rem}
+.method-img{margin-top:2rem;border-radius:8px;overflow:hidden;box-shadow:0 12px 40px rgba(28,37,25,.12)}
+.method-img img{width:100%;height:auto;display:block}
 .method-num{font-family:var(--fd);font-size:5.5rem;font-style:italic;font-weight:300;color:var(--gold);line-height:1;letter-spacing:-.02em}
 .method-num span{font-size:1rem;font-style:normal;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);font-weight:500;display:block;margin-top:.6rem;font-family:var(--fu)}
 .method-body p{font-size:1rem;color:#5a5a48;line-height:1.85;font-weight:300;margin-bottom:1.4rem}
@@ -316,19 +318,9 @@ a{color:inherit}
 .spec{padding:1.1rem 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
 .spec-l{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:400}
 .spec-v{font-family:var(--fd);font-size:1.15rem;color:var(--gold);font-style:italic;font-weight:400;text-align:right}
-.orb{position:relative;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
-.orb-core{width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(168,144,58,.55) 0%,rgba(168,144,58,.18) 35%,rgba(28,37,25,0) 70%);position:relative;display:flex;align-items:center;justify-content:center}
-.orb-core::before{content:'';position:absolute;inset:0;border-radius:50%;border:1px solid rgba(168,144,58,.35)}
-.orb-core::after{content:'';position:absolute;inset:14%;border-radius:50%;border:1px solid rgba(168,144,58,.2)}
-.orb-ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(168,144,58,.15);animation:spin 32s linear infinite}
-.orb-ring.r2{inset:8%;border-color:rgba(168,144,58,.18);animation-duration:48s;animation-direction:reverse}
-.orb-ring.r3{inset:18%;border-color:rgba(168,144,58,.22);animation-duration:60s}
-.orb-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 16px rgba(168,144,58,.7)}
-.orb-ring .orb-dot{top:-5px;left:50%;margin-left:-5px}
-.orb-num{font-family:var(--fd);font-size:2.2rem;font-style:italic;font-weight:300;color:var(--gold);line-height:1;text-align:center}
-.orb-num span{display:block;font-family:var(--fu);font-size:.65rem;font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:500;text-align:center;margin-top:.5rem}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media(max-width:980px){.spheres-in{grid-template-columns:1fr;gap:3rem}.orb{max-width:380px;margin:0 auto;width:100%}}
+.device-vis{border-radius:12px;overflow:hidden;box-shadow:0 0 60px rgba(168,144,58,.18),0 24px 60px rgba(0,0,0,.4)}
+.device-vis img{width:100%;height:auto;display:block}
+@media(max-width:980px){.spheres-in{grid-template-columns:1fr;gap:3rem}.device-vis{max-width:420px;margin:0 auto}}
 
 /* ─── BENEFITS MOSAIC ─── */
 .bene{background:var(--cream);padding:7rem 2rem}
@@ -544,7 +536,7 @@ a{color:inherit}
   </div>
   <div class="hero-vis">
     <div class="hero-vis-img">
-      <img src="assets/lymfomodeling-photo.webp" alt="Endospheres Essenza ošetření — lymfatická drenáž a tvarování těla, Uherské Hradiště" width="640" height="800" loading="eager">
+      <img src="assets/endospheres-osetreni-telo.png" alt="Endospheres Therapy Essenza ošetření — tvarování těla a redukce celulitidy, Maderoterapie UH Uherské Hradiště" width="640" height="800" loading="eager">
     </div>
     <div class="hero-vis-tag">
       <div class="hero-vis-tag-l">Made in Italy · ISO certifikováno</div>
@@ -560,6 +552,9 @@ a{color:inherit}
     <div class="method-grid">
       <div>
         <p class="eyebrow">Metoda</p>
+        <div class="method-img">
+          <img src="assets/endospheres-essenza-pristroj.png" alt="Přístroj Endospheres Essenza — silikónové sféry Compressive Micro-Vibration" width="480" height="600" loading="lazy">
+        </div>
       </div>
       <div class="method-body">
         <h2 class="h2" id="metoda-nadpis" style="margin-bottom:1.6rem">Endospheres Essenza není <em>masáž</em> ve smyslu, jak ji znáte.</h2>
@@ -587,16 +582,8 @@ a{color:inherit}
         <div class="spec" role="listitem"><span class="spec-l">Patent</span><span class="spec-v">Itálie</span></div>
       </div>
     </div>
-    <div class="orb" aria-hidden="true">
-      <div class="orb-ring"><div class="orb-dot"></div></div>
-      <div class="orb-ring r2"><div class="orb-dot"></div></div>
-      <div class="orb-ring r3"><div class="orb-dot"></div></div>
-      <div class="orb-core">
-        <div class="orb-num">
-          Essenza
-          <span>Compressive Micro-Vibration®</span>
-        </div>
-      </div>
+    <div class="device-vis">
+      <img src="assets/endospheres-osetreni-koleno.png" alt="Endospheres Therapy — ošetření terapeutkou, kompresní mikrovibrace na koleno a stehno" width="600" height="400" loading="lazy">
     </div>
   </div>
 </section>
