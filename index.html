@@ -201,7 +201,7 @@ a{color:inherit}
 .hd-phone svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2}
 .hd-book{background:var(--forest);color:#fff;padding:.55rem 1.25rem;border-radius:50px;font-size:.78rem;font-weight:500;letter-spacing:.04em;text-decoration:none;transition:.25s var(--ease)}
 .hd-book:hover{background:var(--deep);transform:translateY(-1px)}
-@media(max-width:900px){.hd-nav,.hd-phone{display:none}.hd-hbg{display:flex}}
+@media(max-width:900px){.hd-nav,.hd-phone,.hd-book{display:none}.hd-hbg{display:flex}.hd-in{grid-template-columns:1fr auto;padding:0 1.2rem}}
 .hd-hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:4px}
 .hd-hbg span{display:block;width:22px;height:1.5px;background:var(--ink);transition:.32s var(--ease)}
 .hd-drawer{display:none;position:fixed;inset:0;z-index:980;background:var(--cream);flex-direction:column;align-items:center;justify-content:center;gap:.5rem}
@@ -237,7 +237,7 @@ a{color:inherit}
 .hero-vis-tag-t{font-family:var(--fd);font-size:1.3rem;line-height:1.25;color:var(--warm);font-weight:400;font-style:italic}
 .hero-vis-stamp{position:absolute;right:-1.4rem;top:3rem;width:120px;height:120px;border-radius:50%;border:1px solid var(--gold);background:rgba(248,247,242,.7);backdrop-filter:blur(4px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:.55rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
 .hero-vis-stamp em{font-family:var(--fd);font-size:1.2rem;font-style:italic;text-transform:none;letter-spacing:0;color:var(--gold);font-weight:400;margin:.3rem 0}
-@media(max-width:980px){.hero{grid-template-columns:1fr;padding:2rem 1.5rem 3rem;gap:3rem}.hero-vis{max-width:480px;margin:0 auto;aspect-ratio:4/5}}
+@media(max-width:980px){.hero{grid-template-columns:1fr;padding:2rem 1.5rem 3rem;gap:3rem}.hero-vis{max-width:480px;margin:0 auto;aspect-ratio:4/5}.hero-vis-stamp,.hero-vis-tag{display:none}}
 
 /* ─── SECTION SHELL ─── */
 .section{padding:7rem 2rem}
@@ -408,6 +408,8 @@ a{color:inherit}
 .ft-bot a{color:var(--stone);text-decoration:none}
 .ft-bot a:hover{color:var(--gold)}
 @media(max-width:768px){.ft-in{grid-template-columns:1fr 1fr;gap:2rem}}
+@media(max-width:980px){.section,.bene,.ritual,.pricing,.faq,.reviews,.book{padding:4rem 1.5rem}.spheres{padding:4rem 1.5rem}.ritual-head{margin-bottom:2.5rem;gap:1.5rem}.pricing-side p{margin-bottom:1rem}}
+@media(max-width:600px){.ft-in{grid-template-columns:1fr}.ft-bot{flex-direction:column;text-align:center}.plan{padding:1.4rem 1.2rem}.plan-pic{width:52px;height:52px;font-size:1.4rem}.hero-actions{flex-direction:column;align-items:flex-start}.btn{width:100%;justify-content:center}.btn-link{align-self:center}.reviews-in{gap:1.5rem}.book-row{flex-direction:column;align-items:center}}
 
 /* ─── FAB ─── */
 .fab{position:fixed;bottom:1.6rem;right:1.6rem;z-index:80;background:var(--forest);color:#fff;padding:.78rem 1.4rem;border-radius:50px;text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;display:flex;align-items:center;gap:.55rem;box-shadow:0 12px 30px rgba(34,45,33,.4);transition:.32s var(--ease)}
