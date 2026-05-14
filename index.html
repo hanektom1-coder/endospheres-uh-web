@@ -387,13 +387,13 @@ a{color:inherit}
 
 /* ─── BENEFITS FACIAL ─── */
 .bene-facial{max-width:1320px;margin:3rem auto 0}
-.bene-facial-head{display:flex;align-items:center;gap:1.5rem;margin-bottom:1.8rem}
-.bene-facial-head::after{content:'';flex:1;height:1px;background:var(--mist)}
-.bene-facial-inner{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}
+.bene-facial-inner{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:stretch}
+.bene-facial-content{display:flex;flex-direction:column;gap:1.2rem}
+.bene-facial-intro{font-size:.95rem;color:var(--stone);line-height:1.85;font-weight:300;max-width:520px}
 .bene-facial-img{border-radius:8px;overflow:hidden}
-.bene-facial-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/5}
-.bene-facial-grid{display:flex;flex-direction:column;gap:1rem}
-@media(max-width:980px){.bene-facial-inner{grid-template-columns:1fr}.bene-facial-img img{aspect-ratio:16/9}}
+.bene-facial-img img{width:100%;height:100%;object-fit:cover;display:block}
+.bene-facial-grid{display:flex;flex-direction:column;gap:1rem;flex:1}
+@media(max-width:980px){.bene-facial-inner{grid-template-columns:1fr}.bene-facial-img{order:-1}.bene-facial-img img{aspect-ratio:4/3;height:auto}}
 
 /* ─── RITUAL ─── */
 .ritual{background:#fff;padding:7rem 2rem}
@@ -702,32 +702,33 @@ a{color:inherit}
   </div>
 
   <div class="bene-facial">
-    <div class="bene-facial-head">
-      <p class="eyebrow" style="margin-bottom:0">Ošetření obličeje</p>
-    </div>
     <div class="bene-facial-inner">
+      <div class="bene-facial-content">
+        <p class="eyebrow">Ošetření obličeje</p>
+        <p class="bene-facial-intro">Kompresní mikrovibrace není jen pro tělo. Speciální hlava Essenza přenáší stejnou patentovanou technologii na pleť obličeje — jemně, precizně, bez dyskomfortu. Třicet minut práce s mikrocirkulací a lymfou udělá víc než řada kosmetických přípravků. Výsledek vidíte okamžitě, efekt trvá dny.</p>
+        <div class="bene-facial-grid">
+          <article class="b">
+            <div>
+              <h3 class="b-name">Zpevnění <em>kontur</em></h3>
+              <p class="b-desc" style="margin-top:.6rem">Mikrovibrace aktivuje kolagenová vlákna a zpevňuje oválnou linii obličeje. Viditelný lifting efekt — bez jehel, bez čekání. Kontury jsou vyrýsovanější už po prvním sezení.</p>
+            </div>
+          </article>
+          <article class="b">
+            <div>
+              <h3 class="b-name">Otoky <em>zmizí</em></h3>
+              <p class="b-desc" style="margin-top:.6rem">Lymfatická drenáž obličeje odvádí přebytečné tekutiny. Ranní opuchy odejdou, tváře získají jasnější kontury a čerstvý výraz, který vydrží celý den.</p>
+            </div>
+          </article>
+          <article class="b">
+            <div>
+              <h3 class="b-name">Zářivá, <em>prokrvená</em> pleť</h3>
+              <p class="b-desc" style="margin-top:.6rem">Zlepšení mikrocirkulace přivede kyslík a živiny přímo k pleti. Přirozený zářivý tón — bez filtrů, bez retuše. Pravidelná ošetření viditelně sjednotí texturu a tón pleti.</p>
+            </div>
+          </article>
+        </div>
+      </div>
       <div class="bene-facial-img">
         <img src="assets/oblicej.png" alt="Endospheres ošetření obličeje — kompresní mikrovibrace, lifting a drenáž pleti, Maderoterapie UH" width="600" height="750" loading="lazy">
-      </div>
-      <div class="bene-facial-grid">
-        <article class="b">
-          <div>
-            <h3 class="b-name">Zpevnění <em>kontur</em></h3>
-            <p class="b-desc" style="margin-top:.6rem">Mikrovibrace aktivuje kolagenová vlákna a zpevňuje oválnou linii obličeje. Viditelný lifting efekt — bez jehel, bez čekání. Kontury jsou vyrýsovanější už po prvním sezení.</p>
-          </div>
-        </article>
-        <article class="b">
-          <div>
-            <h3 class="b-name">Otoky <em>zmizí</em></h3>
-            <p class="b-desc" style="margin-top:.6rem">Lymfatická drenáž obličeje odvádí přebytečné tekutiny. Ranní opuchy odejdou, tváře získají jasnější kontury a čerstvý výraz, který vydrží celý den.</p>
-          </div>
-        </article>
-        <article class="b">
-          <div>
-            <h3 class="b-name">Zářivá, <em>prokrvená</em> pleť</h3>
-            <p class="b-desc" style="margin-top:.6rem">Zlepšení mikrocirkulace přivede kyslík a živiny přímo k pleti. Přirozený zářivý tón — bez filtrů, bez retuše. Pravidelná ošetření viditelně sjednotí texturu a tón pleti.</p>
-          </div>
-        </article>
       </div>
     </div>
   </div>
