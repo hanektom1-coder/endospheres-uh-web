@@ -435,6 +435,22 @@ a{color:inherit}
 .rs-d{font-size:.84rem;color:#6a6a58;line-height:1.7;font-weight:300}
 @media(max-width:980px){.ritual-flow{grid-template-columns:1fr}.rs{border-right:none;border-bottom:1px solid var(--mist)}.rs:last-child{border-bottom:none}}
 
+/* ─── EFFECTS STRIP ─── */
+.effects{background:#fff;padding:3rem 2rem 5rem}
+.effects-head{max-width:1320px;margin:0 auto 2.5rem;text-align:center}
+.effects-eyebrow{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.effects-title{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:var(--ink)}
+.effects-title em{font-style:normal;color:var(--gold)}
+.effects-strip{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:1.2rem}
+.effect-item{display:flex;flex-direction:column}
+.effect-item img{width:100%;aspect-ratio:720/335;object-fit:cover;border-radius:6px;display:block}
+.effect-item figcaption{margin-top:.7rem;font-size:.82rem;line-height:1.5;color:var(--stone);text-align:center;font-weight:300}
+@media(max-width:980px){
+  .effects-strip{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1rem;padding-bottom:.5rem;scrollbar-width:none}
+  .effects-strip::-webkit-scrollbar{display:none}
+  .effect-item{flex:0 0 72vw;scroll-snap-align:start}
+}
+
 /* ─── PHOTO BREAK ─── */
 .photo-break{background:var(--pale);padding:5rem 2rem;text-align:center}
 .photo-break-in{max-width:760px;margin:0 auto}
@@ -821,6 +837,36 @@ a{color:inherit}
       <h3 class="rs-t">Doznění</h3>
       <p class="rs-d">Lymfatický čaj, doporučení pro péči doma, plán série.</p>
     </div>
+  </div>
+</section>
+
+<!-- EFFECTS STRIP -->
+<section class="effects" aria-labelledby="ucinky-nadpis">
+  <div class="effects-head">
+    <p class="effects-eyebrow">Jak to funguje uvnitř</p>
+    <h2 class="effects-title" id="ucinky-nadpis">Pět účinků. <em>Jedno</em> sezení.</h2>
+  </div>
+  <div class="effects-strip" role="list">
+    <figure class="effect-item" role="listitem">
+      <img src="assets/antalgica-720x335.webp" alt="Antalgický účinek Endospheres — sféry působí na nervová zakončení a tlumí bolest v tkáni" width="720" height="335" loading="lazy">
+      <figcaption>Sféry působí na nervová zakončení a uvolňují napětí ve svalech i pojivové tkáni.</figcaption>
+    </figure>
+    <figure class="effect-item" role="listitem">
+      <img src="assets/drenante-720x335.webp" alt="Lymfatická drenáž Endospheres — mikrovibrace urychlují odvod lymfy a eliminují otoky" width="720" height="335" loading="lazy">
+      <figcaption>Mikrovibrace urychlují odvod lymfy a pomáhají eliminovat otoky a zadržovanou tekutinu.</figcaption>
+    </figure>
+    <figure class="effect-item" role="listitem">
+      <img src="assets/vascolare-720x335.webp" alt="Vaskulární stimulace Endospheres — rotace sfér aktivuje prokrvení a výměnu látek" width="720" height="335" loading="lazy">
+      <figcaption>Rotační pohyb sfér aktivuje prokrvení a podporuje výměnu látek v tkáni.</figcaption>
+    </figure>
+    <figure class="effect-item" role="listitem">
+      <img src="assets/rimodellante-720x335.webp" alt="Remodelace tkáně Endospheres — kompresní efekt rozkládá tukové buňky a zpevňuje siluetu" width="720" height="335" loading="lazy">
+      <figcaption>Kompresní efekt rozkládá tukové buňky, redukuje celulitidu a zpevňuje siluetu.</figcaption>
+    </figure>
+    <figure class="effect-item" role="listitem">
+      <img src="assets/muscolare-720x335.webp" alt="Svalová aktivace Endospheres — hluboké vibrace stimulují svalová vlákna a podporují regeneraci" width="720" height="335" loading="lazy">
+      <figcaption>Hluboké vibrace stimulují svalová vlákna a urychlují regeneraci po fyzické zátěži.</figcaption>
+    </figure>
   </div>
 </section>
 
