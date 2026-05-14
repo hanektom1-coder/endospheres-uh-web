@@ -516,6 +516,24 @@ a{color:inherit}
 @media(max-width:600px){.ft-in{grid-template-columns:1fr}.ft-bot{flex-direction:column;text-align:center}.plan{padding:1.4rem 1.2rem}.hero-actions{flex-direction:column;align-items:flex-start}.btn{width:100%;justify-content:center}.btn-link{align-self:center}.reviews-in{gap:1.5rem}.book-row{flex-direction:column;align-items:center}.hero-meta{flex-direction:column;gap:1.2rem;border-top:none;padding-top:1.2rem;margin-top:2rem}.hero-meta>div{display:flex;align-items:baseline;gap:.7rem;opacity:0;transform:translateY(12px);animation:statIn .5s var(--ease) forwards}.hero-meta>div:nth-child(1){animation-delay:.1s}.hero-meta>div:nth-child(2){animation-delay:.28s}.hero-meta>div:nth-child(3){animation-delay:.46s}.hero-meta-v{font-size:1.1rem}.hero-meta-l{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;color:var(--stone)}}
 @keyframes statIn{to{opacity:1;transform:translateY(0)}}
 
+/* ─── TOPBAR ─── */
+.topbar{background:var(--forest);color:rgba(255,255,255,.65);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:400;padding:.45rem 2rem;display:flex;align-items:center;justify-content:center;gap:.9rem;flex-wrap:wrap}
+.topbar a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:.35rem;font-weight:500;transition:color .2s}
+.topbar a:hover{color:var(--gold)}
+.topbar-sep{color:rgba(255,255,255,.25)}
+
+/* ─── CROSS-PROMO ─── */
+.xpromo{background:var(--pale);padding:4.5rem 2rem;border-top:1px solid var(--mist)}
+.xpromo-in{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center}
+.xpromo-eyebrow{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem}
+.xpromo-eyebrow::before{content:'';width:20px;height:1px;background:var(--gold)}
+.xpromo h2{font-family:var(--fd);font-weight:300;font-size:clamp(1.8rem,3vw,2.6rem);color:var(--ink);line-height:1.1;margin-bottom:.8rem}
+.xpromo h2 em{font-style:italic;color:var(--gold)}
+.xpromo-p{font-size:.9rem;color:var(--stone);line-height:1.8;font-weight:300;max-width:480px;margin-bottom:1.4rem}
+.xpromo-tags{display:flex;gap:.5rem;flex-wrap:wrap}
+.xpromo-tag{font-size:.72rem;letter-spacing:.06em;background:#fff;border:1px solid var(--mist);color:var(--stone);padding:.35rem .8rem;border-radius:50px;font-weight:400}
+@media(max-width:768px){.xpromo-in{grid-template-columns:1fr;gap:2rem}}
+
 /* ─── FAB ─── */
 .fab{position:fixed;bottom:1.6rem;right:1.6rem;z-index:80;background:var(--forest);color:#fff;padding:.78rem 1.4rem;border-radius:50px;text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;display:flex;align-items:center;gap:.55rem;box-shadow:0 12px 30px rgba(34,45,33,.4);transition:.32s var(--ease)}
 .fab:hover{background:var(--deep);transform:translateY(-2px)}
@@ -524,6 +542,15 @@ a{color:inherit}
 </style>
 </head>
 <body>
+
+<div class="topbar" role="navigation" aria-label="Navigace na hlavní web">
+  <a href="https://www.maderoterapieuh.cz" rel="noopener">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Maderoterapie UH
+  </a>
+  <span class="topbar-sep" aria-hidden="true">·</span>
+  <span>Maderoterapie · masáže · dárkové poukazy · Uherské Hradiště</span>
+</div>
 
 <header class="hd">
   <div class="hd-in">
@@ -966,6 +993,28 @@ a{color:inherit}
 </section>
 
 </main>
+
+<!-- CROSS-PROMO -->
+<div class="xpromo" aria-label="Další služby Maderoterapie UH">
+  <div class="xpromo-in">
+    <div>
+      <p class="xpromo-eyebrow">Studio Šestý smysl · Uherské Hradiště</p>
+      <h2>Endospheres je součástí <em>Maderoterapie UH</em>.</h2>
+      <p class="xpromo-p">Lenka nabízí i další procedury — od maderoterapie těla a pleti přes španělskou masáž až po dárkové poukazy pro blízké.</p>
+      <div class="xpromo-tags" aria-label="Další služby">
+        <span class="xpromo-tag">Maderoterapie těla</span>
+        <span class="xpromo-tag">Maderoterapie pleti</span>
+        <span class="xpromo-tag">Španělská masáž</span>
+        <span class="xpromo-tag">Lymfomodeling</span>
+        <span class="xpromo-tag">Dárkové poukazy</span>
+      </div>
+    </div>
+    <a class="btn btn-f" href="https://www.maderoterapieuh.cz" rel="noopener" aria-label="Přejít na web Maderoterapie UH">
+      Navštívit web
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer class="ft" aria-label="Zápatí stránky">
