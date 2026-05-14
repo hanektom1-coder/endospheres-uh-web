@@ -427,20 +427,23 @@ a{color:inherit}
 .pricing-side p{font-size:.92rem;color:var(--stone);line-height:1.8;font-weight:300;margin-bottom:1.6rem}
 .pricing-note{padding:1.2rem 1.4rem;background:#fff;border-radius:8px;border:1px solid var(--mist);font-size:.8rem;color:#6a6a58;line-height:1.7;font-weight:300}
 .pricing-note strong{color:var(--gold);font-weight:500}
-.plans{display:flex;flex-direction:column;gap:1rem}
-.plan{background:#fff;border:1px solid var(--mist);border-radius:10px;padding:2rem 2.2rem;display:grid;grid-template-columns:1fr auto;gap:1.6rem;align-items:center;transition:.32s var(--ease)}
-.plan:hover{background:var(--forest);color:#fff;border-color:transparent;box-shadow:0 8px 26px rgba(28,37,25,.07)}
-.plan-pic{width:72px;height:72px;border-radius:50%;background:var(--pale);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:1.7rem;font-style:italic;font-weight:400;color:var(--gold)}
-.plan:hover .plan-pic{background:rgba(168,144,58,.15);color:var(--warm)}
-.plan-body .plan-n{font-family:var(--fd);font-size:1.4rem;font-weight:500;line-height:1.2;margin-bottom:.3rem}.plan-n em{font-style:italic;color:var(--gold);font-size:1.45em}
-.plan-body .plan-s{font-size:.78rem;color:var(--stone);line-height:1.5;font-weight:300;letter-spacing:.02em}
-.plan:hover .plan-s{color:rgba(255,255,255,.55)}
-.plan-pr{text-align:right}
-.plan-pr-v{font-family:var(--fd);font-size:1.7rem;font-weight:400;color:var(--gold);line-height:1}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.plan{background:#fff;border:1px solid var(--mist);border-radius:10px;padding:1.4rem 1.7rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:.32s var(--ease)}
+.plan:hover{background:var(--forest);color:#fff;border-color:transparent;box-shadow:0 8px 26px rgba(28,37,25,.12);transform:translateY(-2px)}
+.plan.pkg{background:linear-gradient(135deg,var(--forest) 0%,var(--deep) 100%);border-color:transparent;color:#fff}
+.plan.pkg:hover{background:linear-gradient(135deg,var(--deep) 0%,#141c13 100%);box-shadow:0 12px 32px rgba(28,37,25,.35)}
+.plan.wide{grid-column:1/-1}
+.plan-body .plan-n{font-family:var(--fd);font-size:1.25rem;font-weight:500;line-height:1.2;margin-bottom:.25rem}
+.plan-n em{font-style:italic;color:var(--gold)}
+.plan-body .plan-s{font-size:.76rem;color:var(--stone);line-height:1.5;font-weight:300;letter-spacing:.02em}
+.plan:hover .plan-s,.plan.pkg .plan-s{color:rgba(255,255,255,.55)}
+.plan-pr{text-align:right;flex-shrink:0}
+.plan-pr-v{font-family:var(--fd);font-size:1.55rem;font-weight:400;color:var(--gold);line-height:1}
 .plan:hover .plan-pr-v{color:var(--warm)}
-.plan-pr-l{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);margin-top:.3rem;font-weight:400}
-.plan:hover .plan-pr-l{color:rgba(255,255,255,.4)}
-@media(max-width:980px){.pricing-in{grid-template-columns:1fr;gap:2.5rem}.pricing-side{position:static}.plan{grid-template-columns:auto 1fr;gap:1rem}.plan-pr{grid-column:span 2;text-align:left;border-top:1px solid var(--mist);padding-top:.8rem}.plan-pr-v{font-size:1.4rem}}
+.plan.pkg .plan-pr-v{color:var(--gold)}
+.plan-pr-l{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);margin-top:.3rem;font-weight:400}
+.plan:hover .plan-pr-l,.plan.pkg .plan-pr-l{color:rgba(255,255,255,.4)}
+@media(max-width:980px){.pricing-in{grid-template-columns:1fr;gap:2.5rem}.pricing-side{position:static}.plans{grid-template-columns:1fr}.plan.wide{grid-column:auto}.plan{flex-direction:column;align-items:flex-start;gap:.5rem}.plan-pr{text-align:left}.plan-pr-v{font-size:1.3rem}}
 
 /* ─── REVIEWS ─── */
 .reviews{background:var(--forest);color:#fff;padding:6rem 2rem}
@@ -816,15 +819,15 @@ a{color:inherit}
         <div class="plan-body"><div class="plan-n">Jedno sezení</div><div class="plan-s">55 minut · jedna partie těla</div></div>
         <div class="plan-pr"><div class="plan-pr-v">2 100 Kč</div><div class="plan-pr-l">/ sezení</div></div>
       </div>
-      <div class="plan feature">
+      <div class="plan">
         <div class="plan-body"><div class="plan-n">Celé tělo</div><div class="plan-s">75 minut · komplexní ošetření Essenza</div></div>
         <div class="plan-pr"><div class="plan-pr-v">2 850 Kč</div><div class="plan-pr-l">/ sezení</div></div>
       </div>
-      <div class="plan">
-        <div class="plan-body"><div class="plan-n">Balíček <em style="font-size:1.2em">6</em> sezení</div><div class="plan-s">úspora 10 % · platnost 12 týdnů</div></div>
+      <div class="plan pkg">
+        <div class="plan-body"><div class="plan-n">Balíček <em>6</em> sezení</div><div class="plan-s">úspora 10 % · platnost 12 týdnů</div></div>
         <div class="plan-pr"><div class="plan-pr-v">11 350 Kč</div><div class="plan-pr-l">série</div></div>
       </div>
-      <div class="plan">
+      <div class="plan pkg">
         <div class="plan-body"><div class="plan-n">Balíček <em>10</em> sezení</div><div class="plan-s">úspora 15 % · doporučeno pro celulitidu</div></div>
         <div class="plan-pr"><div class="plan-pr-v">17 850 Kč</div><div class="plan-pr-l">série</div></div>
       </div>
@@ -836,7 +839,7 @@ a{color:inherit}
         <div class="plan-body"><div class="plan-n">Ošetření <em>obličeje</em></div><div class="plan-s">45 minut · lifting, drenáž, rozjasnění pleti</div></div>
         <div class="plan-pr"><div class="plan-pr-v">1 800 Kč</div><div class="plan-pr-l">/ sezení</div></div>
       </div>
-      <div class="plan">
+      <div class="plan wide">
         <div class="plan-body"><div class="plan-n">Dárkový poukaz</div><div class="plan-s">na libovolnou hodnotu nebo proceduru</div></div>
         <div class="plan-pr"><div class="plan-pr-v">od 850</div><div class="plan-pr-l">Kč</div></div>
       </div>
