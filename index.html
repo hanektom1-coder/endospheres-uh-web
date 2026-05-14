@@ -568,6 +568,7 @@ a{color:inherit}
 .topbar a{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:.35rem;font-weight:500;transition:color .2s}
 .topbar a:hover{color:var(--gold)}
 .topbar-sep{color:rgba(255,255,255,.25)}
+@media(max-width:700px){.topbar-d{display:none}}
 
 /* ─── CROSS-PROMO ─── */
 .xpromo{background:var(--pale);padding:4.5rem 2rem;border-top:1px solid var(--mist)}
@@ -590,13 +591,18 @@ a{color:inherit}
 </head>
 <body>
 
-<div class="topbar" role="navigation" aria-label="Navigace na hlavní web">
-  <a href="https://www.maderoterapieuh.cz" rel="noopener">
-    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-    Maderoterapie UH
-  </a>
+<div class="topbar" role="navigation" aria-label="Další služby Maderoterapie UH">
+  <a href="https://www.maderoterapieuh.cz" rel="noopener">Maderoterapie</a>
   <span class="topbar-sep" aria-hidden="true">·</span>
-  <span><a href="https://www.maderoterapieuh.cz" rel="noopener">Maderoterapie</a> · <a href="https://www.maderoterapieuh.cz" rel="noopener">Lymfomodeling</a> · <a href="https://www.maderoterapieuh.cz" rel="noopener">Lymfodrenáž</a> · <a href="https://www.maderoterapieuh.cz" rel="noopener">a další…</a></span>
+  <a href="https://www.maderoterapieuh.cz" rel="noopener">Lymfomodeling</a>
+  <span class="topbar-sep" aria-hidden="true">·</span>
+  <a href="https://www.maderoterapieuh.cz" rel="noopener">Lymfodrenáž</a>
+  <span class="topbar-sep topbar-d" aria-hidden="true">·</span>
+  <a class="topbar-d" href="https://www.maderoterapieuh.cz" rel="noopener">Španělská masáž</a>
+  <span class="topbar-sep topbar-d" aria-hidden="true">·</span>
+  <a class="topbar-d" href="https://www.maderoterapieuh.cz" rel="noopener">Abhyanga</a>
+  <span class="topbar-sep topbar-d" aria-hidden="true">·</span>
+  <a class="topbar-d" href="https://www.maderoterapieuh.cz" rel="noopener">Tělové svíce</a>
 </div>
 
 <header class="hd">
