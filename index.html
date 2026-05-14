@@ -484,20 +484,22 @@ a{color:inherit}
 /* ─── CONTACT ─── */
 .contact{background:var(--cream);padding:7rem 2rem;border-top:1px solid var(--mist)}
 .contact-in{max-width:1320px;margin:0 auto}
-.contact-top{display:flex;justify-content:space-between;align-items:flex-end;gap:3rem;flex-wrap:wrap;margin-bottom:3.5rem}
-.contact-top p{font-size:.9rem;line-height:1.8;color:var(--stone);font-weight:300;max-width:380px}
-.ci-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-bottom:2rem}
-.ci{background:#fff;border:1px solid var(--mist);border-radius:10px;padding:1.2rem 1.4rem;display:flex;flex-direction:column;gap:.3rem}
-.ci-icon{width:34px;height:34px;background:var(--cream);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:.4rem;flex-shrink:0}
-.ci-icon svg{width:14px;height:14px;fill:none;stroke:var(--forest);stroke-width:1.5}
-.ci-lbl{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--stone)}
-.ci-val{font-size:.88rem;font-weight:500;color:var(--ink);text-decoration:none;transition:color .2s}
+.contact-grid{display:grid;grid-template-columns:5fr 6fr;gap:5rem;align-items:stretch}
+.ci-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1.3rem}
+.ci{display:flex;gap:1rem;align-items:flex-start}
+.ci-icon{width:38px;height:38px;background:#fff;border:1px solid var(--mist);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-icon svg{width:15px;height:15px;fill:none;stroke:var(--forest);stroke-width:1.5}
+.ci-lbl{font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--stone);margin-bottom:2px}
+.ci-val{font-size:.9rem;font-weight:500;color:var(--ink);text-decoration:none;transition:color .2s}
 .ci-val:hover{color:var(--gold)}
-.ci-sub{font-size:.72rem;color:var(--stone);font-weight:300}
-.map-box{border-radius:10px;overflow:hidden;border:1px solid var(--mist)}
-.map-box iframe{display:block;width:100%;height:460px;border:none}
-@media(max-width:980px){.ci-grid{grid-template-columns:1fr 1fr}.map-box iframe{height:320px}}
-@media(max-width:600px){.ci-grid{grid-template-columns:1fr}}
+.ci-sub{font-size:.73rem;color:var(--stone);font-weight:300;margin-top:1px}
+.contact-social{display:flex;gap:.7rem;margin-top:1.8rem}
+.contact-social a{width:36px;height:36px;border-radius:9px;background:#fff;border:1px solid var(--mist);display:flex;align-items:center;justify-content:center;color:var(--stone);transition:.2s}
+.contact-social a:hover{border-color:var(--gold);color:var(--gold)}
+.contact-social svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5}
+.map-box{border-radius:10px;overflow:hidden;border:1px solid var(--mist);height:100%;min-height:440px}
+.map-box iframe{display:block;width:100%;height:100%;min-height:440px;border:none}
+@media(max-width:980px){.contact-grid{grid-template-columns:1fr;gap:2.5rem}.map-box,.map-box iframe{min-height:320px}}
 
 /* ─── FOOTER ─── */
 .ft{background:var(--cream);color:var(--stone);padding:4rem 2rem 2rem;border-top:1px solid var(--mist)}
@@ -922,51 +924,59 @@ a{color:inherit}
 <!-- CONTACT -->
 <section class="contact" id="kontakt" aria-labelledby="kontakt-nadpis">
   <div class="contact-in">
-    <div class="contact-top">
+    <div class="contact-grid">
       <div>
         <p class="eyebrow">Kontakt</p>
         <h2 class="h2" id="kontakt-nadpis">Najdete nás<br>v centru <em>Uherského Hradiště</em>.</h2>
+        <p style="font-size:.9rem;line-height:1.8;color:var(--stone);font-weight:300;max-width:380px;margin-top:1rem">Rádi odpovíme na vaše dotazy a pomůžeme s výběrem správného ošetření. Napište, zavolejte nebo se objednejte online.</p>
+        <div class="ci-list">
+          <div class="ci">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <div class="ci-lbl">Adresa</div>
+              <a class="ci-val" href="https://maps.google.com/?q=Hradební+1543,+686+01+Uherské+Hradiště" rel="noopener" target="_blank">Hradební 1543, 686 01 Uherské Hradiště</a>
+              <div class="ci-sub">Studio Šestý smysl · 1. patro</div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
+            <div>
+              <div class="ci-lbl">Telefon</div>
+              <a class="ci-val" href="tel:+420776323427">+420 776 323 427</a>
+              <div class="ci-sub">Po–Pá 9–18 hod</div>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+            <div>
+              <div class="ci-lbl">E-mail</div>
+              <a class="ci-val" href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a>
+            </div>
+          </div>
+          <div class="ci">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div>
+              <div class="ci-lbl">Hlavní web</div>
+              <a class="ci-val" href="https://www.maderoterapieuh.cz" rel="noopener" target="_blank">maderoterapieuh.cz</a>
+              <div class="ci-sub">Další procedury a masáže</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-social">
+          <a href="https://www.instagram.com/maderoterapieuh" rel="noopener" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
       </div>
-      <p>Rádi odpovíme na vaše dotazy a pomůžeme s výběrem správného ošetření. Napište, zavolejte nebo se objednejte online.</p>
-    </div>
-    <div class="ci-grid">
-      <div class="ci">
-        <div class="ci-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div class="ci-lbl">Adresa</div>
-        <a class="ci-val" href="https://maps.google.com/?q=Hradební+1543,+686+01+Uherské+Hradiště" rel="noopener" target="_blank">Hradební 1543, Uherské Hradiště</a>
-        <div class="ci-sub">Studio Šestý smysl · 1. patro</div>
+      <div class="map-box">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.3!2d17.4580!3d49.0693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713ef3d3b3b3b3b%3A0x1!2sHradební+1543%2C+686+01+Uherské+Hradiště!5e0!3m2!1scs!2scz!4v1700000000000"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Studio Šestý smysl — mapa"
+        ></iframe>
       </div>
-      <div class="ci">
-        <div class="ci-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></div>
-        <div class="ci-lbl">Telefon</div>
-        <a class="ci-val" href="tel:+420776323427">+420 776 323 427</a>
-        <div class="ci-sub">Po–Pá 9–18 hod</div>
-      </div>
-      <div class="ci">
-        <div class="ci-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
-        <div class="ci-lbl">E-mail</div>
-        <a class="ci-val" href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a>
-      </div>
-      <div class="ci">
-        <div class="ci-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-        <div class="ci-lbl">Instagram</div>
-        <a class="ci-val" href="https://www.instagram.com/maderoterapieuh" rel="noopener" target="_blank">@maderoterapieuh</a>
-      </div>
-      <div class="ci">
-        <div class="ci-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <div class="ci-lbl">Hlavní web</div>
-        <a class="ci-val" href="https://www.maderoterapieuh.cz" rel="noopener" target="_blank">maderoterapieuh.cz</a>
-        <div class="ci-sub">Další procedury a masáže</div>
-      </div>
-    </div>
-    <div class="map-box">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.3!2d17.4580!3d49.0693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713ef3d3b3b3b3b%3A0x1!2sHradební+1543%2C+686+01+Uherské+Hradiště!5e0!3m2!1scs!2scz!4v1700000000000"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Studio Šestý smysl — mapa"
-      ></iframe>
     </div>
   </div>
 </section>
