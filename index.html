@@ -442,11 +442,11 @@ a{color:inherit}
 .effects-title{font-family:var(--fd);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:300;color:var(--ink)}
 .effects-title em{font-style:normal;color:var(--gold)}
 .effects-nav{max-width:1320px;margin:0 auto;display:flex;align-items:center;gap:.75rem}
-.effects-strip{flex:1;min-width:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:1.2rem;padding-bottom:1.2rem;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;-webkit-overflow-scrolling:touch}
+.effects-strip{flex:1;min-width:0;display:flex;align-items:flex-start;overflow-x:auto;scroll-snap-type:x mandatory;gap:1.2rem;padding-bottom:1.2rem;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;-webkit-overflow-scrolling:touch}
 .effects-strip::-webkit-scrollbar{height:3px}
 .effects-strip::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
 .effect-item{flex:0 0 clamp(260px,32vw,440px);scroll-snap-align:start;display:flex;flex-direction:column}
-.effect-item img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;display:block}
+.effect-item img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px;display:block}
 .effect-item figcaption{margin-top:.7rem;font-size:.82rem;line-height:1.5;color:var(--stone);text-align:center;font-weight:300}
 .eff-btn{flex-shrink:0;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--mist);background:#fff;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s}
 .eff-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
