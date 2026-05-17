@@ -221,16 +221,16 @@
     },
     {
       "@type": "Review",
-      "reviewBody": "Po druhém ošetření Endospheres jsem viděla rozdíl na stehnech. Lenka je profesionálka, vysvětlí každý krok a je s ní krásně.",
+      "reviewBody": "Po prvním ošetření odcházím s pocitem lehkosti — otoky nohou zmizely ještě ten večer.",
       "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "author": {"@type": "Person", "name": "Markéta H."},
+      "author": {"@type": "Person", "name": "Klientka"},
       "itemReviewed": {"@id": "https://endospheresuh.cz/#studio"}
     },
     {
       "@type": "Review",
-      "reviewBody": "Bála jsem se bolesti — naprosto zbytečně. Endospheres Essenza je příjemné a po ošetření mám pocit, že jsem spala 12 hodin.",
+      "reviewBody": "Žádná bolest, žádné modřiny. Čekala jsem tlak — místo toho relaxace.",
       "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "author": {"@type": "Person", "name": "Tereza K."},
+      "author": {"@type": "Person", "name": "Klientka"},
       "itemReviewed": {"@id": "https://endospheresuh.cz/#studio"}
     }
   ]
@@ -478,15 +478,16 @@ a{color:inherit}
 @media(max-width:980px){.pricing-in{grid-template-columns:1fr;gap:2.5rem}.pricing-side{position:static}.plans{grid-template-columns:1fr}.plan.wide{grid-column:auto}.plan{flex-direction:column;align-items:flex-start;gap:.5rem}.plan-pr{text-align:left}.plan-pr-v{font-size:1.3rem}}
 
 /* ─── REVIEWS ─── */
-.reviews{background:var(--forest);color:#fff;padding:6rem 2rem}
-.reviews-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
-.rev{padding:2rem;border-left:1px solid rgba(168,144,58,.4)}
-.rev-stars{color:var(--gold);letter-spacing:4px;font-size:.85rem;margin-bottom:1rem}
-.rev-q{font-family:var(--fd);font-size:1.45rem;font-weight:300;font-style:italic;line-height:1.45;color:#fff;margin-bottom:1.4rem}
+.reviews{background:var(--forest);color:#fff;padding:5rem 2rem;position:relative;overflow:hidden}
+.reviews::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 50% 50%,rgba(168,144,58,.07) 0%,transparent 70%);pointer-events:none}
+.reviews-head{max-width:1320px;margin:0 auto 2.5rem;position:relative}
+.reviews-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;position:relative}
+.rev{padding:2rem 1.8rem 2rem;background:rgba(255,255,255,.05);border-radius:8px;border:1px solid rgba(168,144,58,.2);display:flex;flex-direction:column;gap:1.2rem;transition:.3s ease}
+.rev::before{content:'\201C';font-family:var(--fd);font-size:3.5rem;line-height:1;color:var(--gold);opacity:.6;display:block;margin-bottom:-.5rem}
+.rev-q{font-family:var(--fd);font-size:1.05rem;font-weight:300;font-style:italic;line-height:1.6;color:rgba(255,255,255,.88);margin:0}
 .rev-q em{font-style:normal;color:var(--gold)}
-.rev-meta{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:400}
-.rev-meta b{color:var(--warm);font-weight:500}
-@media(max-width:980px){.reviews-in{grid-template-columns:1fr;gap:1rem}}
+@media(max-width:980px){.reviews-in{grid-template-columns:1fr 1fr;gap:1rem}}
+@media(max-width:600px){.reviews-in{grid-template-columns:1fr}}
 
 /* ─── FAQ ─── */
 .faq{background:#fff;padding:7rem 2rem}
@@ -928,16 +929,21 @@ a{color:inherit}
 
 <!-- REVIEWS -->
 <section class="reviews" aria-labelledby="recenze-nadpis">
+  <div class="reviews-head">
+    <p class="eyebrow" style="color:var(--gold)">Co říkají klientky</p>
+  </div>
   <div class="reviews-in">
     <div class="rev">
-      <div class="rev-stars" aria-label="Hodnocení 5 z 5 hvězdiček">★★★★★</div>
-      <blockquote class="rev-q">"Po druhém ošetření Endospheres jsem viděla rozdíl <em>na stehnech</em>. Lenka je profesionálka, vysvětlí každý krok a je s ní krásně."</blockquote>
-      <div class="rev-meta"><b>Markéta H.</b> · Uherské Hradiště</div>
+      <blockquote class="rev-q">Po prvním ošetření odcházím s pocitem <em>lehkosti</em> — otoky nohou zmizely ještě ten večer.</blockquote>
     </div>
     <div class="rev">
-      <div class="rev-stars" aria-label="Hodnocení 5 z 5 hvězdiček">★★★★★</div>
-      <blockquote class="rev-q">"Bála jsem se bolesti — naprosto zbytečně. Endospheres Essenza je <em>příjemné</em> a po ošetření mám pocit, že jsem spala 12 hodin."</blockquote>
-      <div class="rev-meta"><b>Tereza K.</b> · Staré Město</div>
+      <blockquote class="rev-q">Žádná bolest, žádné modřiny. Čekala jsem tlak — místo toho <em>úplná relaxace</em>.</blockquote>
+    </div>
+    <div class="rev">
+      <blockquote class="rev-q">Po sérii ošetření vidím <em>viditelnou změnu</em> na bocích a stehnech. Pokožka je pevnější.</blockquote>
+    </div>
+    <div class="rev">
+      <blockquote class="rev-q">Kombinace s lymfomodelingem — <em>výsledky přišly mnohem rychleji</em>, než jsem čekala.</blockquote>
     </div>
   </div>
 </section>
@@ -999,8 +1005,8 @@ a{color:inherit}
 <!-- BOOK CTA -->
 <section class="book" aria-labelledby="cta-nadpis">
   <div class="book-in">
-    <h2 id="cta-nadpis">Vyhraďte si <em>chvíli</em>.<br>Tělo si pamatuje.</h2>
-    <p>Online rezervace 24/7 nebo zavolejte kdykoli během pracovní doby. První konzultace je zdarma.</p>
+    <h2 id="cta-nadpis">Vyhraďte si čas na <em>své tělo</em>.</h2>
+    <p>Online rezervace 24/7 nebo zavolejte kdykoli během pracovní doby.</p>
     <div class="book-row">
       <a class="btn btn-g" href="https://rezervace.maderoterapieuh.cz" rel="noopener">
         Online rezervace
@@ -1080,15 +1086,16 @@ a{color:inherit}
 <div class="xpromo" aria-label="Další služby Maderoterapie UH">
   <div class="xpromo-in">
     <div>
-      <p class="xpromo-eyebrow">Studio Šestý smysl · Uherské Hradiště</p>
-      <h2>Endospheres je součástí <em>Maderoterapie UH</em>.</h2>
-      <p class="xpromo-p">Soukromé studio v srdci Uherského Hradiště zaměřené na péči o tělo, lymfatický systém a celkovou pohodu. Bc. Lenka Hanáčková kombinuje moderní technologie s tradičními rituály — vše s osobním přístupem a v klidném prostředí studia Šestý smysl.</p>
+      <p class="xpromo-eyebrow">Šestý smysl · Uherské Hradiště</p>
+      <h2>Endospheres Therapy<br>exkluzivně v <em>Maderoterapie UH</em>.</h2>
+      <p class="xpromo-p">Soukromé studio v srdci Uherského Hradiště zaměřené na péči o tělo, lymfatický systém a celkovou pohodu. Bc. Lenka Hanáčková kombinuje moderní technologie s tradičními rituály — vše s osobním přístupem a v klidném prostředí.</p>
       <div class="xpromo-tags" aria-label="Další služby">
         <span class="xpromo-tag">Maderoterapie</span>
         <span class="xpromo-tag">Lymfomodeling</span>
         <span class="xpromo-tag">Španělská masáž</span>
         <span class="xpromo-tag">Lymfodrenáž</span>
         <span class="xpromo-tag">Abhyanga</span>
+        <span class="xpromo-tag">AN MO</span>
       </div>
     </div>
     <a class="btn btn-f" href="https://www.maderoterapieuh.cz" rel="noopener" aria-label="Přejít na web Maderoterapie UH">
@@ -1104,7 +1111,7 @@ a{color:inherit}
     <div class="ft-grid">
       <div>
         <div class="f-bname"><div class="f-bdot"></div>Endospheres Essenza Therapy</div>
-        <p class="f-bdesc">Italská kompresní mikrovibrace pro lymfatickou drenáž, redukci celulitidy a tvarování těla. Studio Šestý smysl, Uherské Hradiště. Bc. Lenka Hanáčková.</p>
+        <p class="f-bdesc">Italská kompresní mikrovibrace pro lymfatickou drenáž, redukci celulitidy a tvarování těla. Studio Maderoterapie UH, Uherské Hradiště. Bc. Lenka Hanáčková.</p>
         <a class="btn btn-f" href="https://rezervace.maderoterapieuh.cz" rel="noopener" style="font-size:.77rem;padding:.58rem 1.25rem">Rezervovat online</a>
       </div>
       <div>
