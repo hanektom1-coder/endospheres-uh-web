@@ -582,7 +582,9 @@ a{color:inherit}
 .xpromo-p{font-size:.9rem;color:var(--stone);line-height:1.8;font-weight:300;max-width:480px;margin-bottom:1.4rem}
 .xpromo-tags{display:flex;gap:.5rem;flex-wrap:wrap}
 .xpromo-tag{font-size:.72rem;letter-spacing:.06em;background:#fff;border:1px solid var(--mist);color:var(--stone);padding:.35rem .8rem;border-radius:50px;font-weight:400}
-@media(max-width:768px){.xpromo-in{grid-template-columns:1fr;gap:2rem}}
+.xpromo-right{display:flex;flex-direction:column;align-items:center;gap:1.8rem}
+.xpromo-logo{width:190px;height:auto;mix-blend-mode:multiply;opacity:.9}
+@media(max-width:768px){.xpromo-in{grid-template-columns:1fr;gap:2rem}.xpromo-right{align-items:flex-start}.xpromo-logo{width:150px}}
 
 /* ─── FAB ─── */
 .fab{position:fixed;bottom:1.6rem;right:1.6rem;z-index:80;background:var(--forest);color:#fff;padding:.78rem 1.4rem;border-radius:50px;text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.06em;display:flex;align-items:center;gap:.55rem;box-shadow:0 12px 30px rgba(34,45,33,.4);transition:.32s var(--ease)}
@@ -1112,10 +1114,13 @@ a{color:inherit}
         <span class="xpromo-tag">AN MO</span>
       </div>
     </div>
-    <a class="btn btn-f" href="https://www.maderoterapieuh.cz" rel="noopener" aria-label="Přejít na web Maderoterapie UH">
-      Navštívit web
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </a>
+    <div class="xpromo-right">
+      <img class="xpromo-logo" src="assets/endospheres-logo.png" alt="endoSPHERES® — oficiální certifikovaná technologie" loading="lazy">
+      <a class="btn btn-f" href="https://www.maderoterapieuh.cz" rel="noopener" aria-label="Přejít na web Maderoterapie UH">
+        Navštívit web
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
   </div>
 </div>
 
