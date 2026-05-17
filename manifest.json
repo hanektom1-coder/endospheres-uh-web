@@ -1,0 +1,22 @@
+{
+  "name": "Endospheres Essenza Therapy",
+  "short_name": "Endospheres UH",
+  "description": "Endospheres Essenza Therapy — italská kompresní mikrovibrace pro redukci celulitidy, tvarování těla a lymfatickou drenáž v Uherském Hradišti.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F8F7F2",
+  "theme_color": "#313D30",
+  "lang": "cs",
+  "icons": [
+    {
+      "src": "assets/favicon.png",
+      "type": "image/png",
+      "sizes": "any"
+    },
+    {
+      "src": "assets/og-image.png",
+      "type": "image/png",
+      "sizes": "1200x630"
+    }
+  ]
+}
