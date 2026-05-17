@@ -346,7 +346,19 @@ a{color:inherit}
 .spec-v{font-family:var(--fd);font-size:1.15rem;color:var(--gold);font-style:italic;font-weight:400;text-align:right}
 .device-vis{border-radius:12px;overflow:hidden;box-shadow:0 0 60px rgba(168,144,58,.18),0 24px 60px rgba(0,0,0,.4)}
 .device-vis img{width:100%;height:auto;display:block}
-@media(max-width:980px){.spheres-in{grid-template-columns:1fr;gap:3rem}.device-vis{max-width:420px;margin:0 auto}}
+.orb{position:relative;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.orb-core{width:62%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(168,144,58,.55) 0%,rgba(168,144,58,.18) 35%,rgba(28,37,25,0) 70%);position:relative;display:flex;align-items:center;justify-content:center}
+.orb-core::before{content:'';position:absolute;inset:0;border-radius:50%;border:1px solid rgba(168,144,58,.35)}
+.orb-core::after{content:'';position:absolute;inset:14%;border-radius:50%;border:1px solid rgba(168,144,58,.2)}
+.orb-ring{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(168,144,58,.15);animation:spin 32s linear infinite}
+.orb-ring.r2{inset:8%;border-color:rgba(168,144,58,.18);animation-duration:48s;animation-direction:reverse}
+.orb-ring.r3{inset:18%;border-color:rgba(168,144,58,.22);animation-duration:60s}
+.orb-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 16px rgba(168,144,58,.7)}
+.orb-ring .orb-dot{top:-5px;left:50%;margin-left:-5px}
+.orb-num{font-family:var(--fd);font-size:2.2rem;font-style:italic;font-weight:300;color:var(--gold);line-height:1;text-align:center}
+.orb-num span{display:block;font-family:var(--fu);font-size:.65rem;font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);font-weight:500;margin-top:.5rem}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:980px){.spheres-in{grid-template-columns:1fr;gap:3rem}.orb{max-width:380px;margin:0 auto;width:100%}}
 
 /* ─── BENEFITS MOSAIC ─── */
 .bene{background:var(--cream);padding:7rem 2rem}
@@ -399,7 +411,9 @@ a{color:inherit}
 .ritual{background:#fff;padding:7rem 2rem}
 .ritual-head{max-width:1320px;margin:0 auto 4rem;display:flex;justify-content:space-between;align-items:flex-end;gap:3rem;flex-wrap:wrap}
 .ritual-head .h2{max-width:520px}
-.ritual-head p{max-width:380px;font-size:.92rem;color:var(--stone);line-height:1.8;font-weight:300}
+.ritual-head p:not(.eyebrow){max-width:380px;font-size:.92rem;color:var(--stone);line-height:1.8;font-weight:300}
+.ritual-img{max-width:1320px;margin:0 auto 2.5rem;border-radius:8px;overflow:hidden;max-height:460px}
+.ritual-img img{width:100%;height:100%;object-fit:cover;display:block}
 .ritual-flow{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--mist);border-bottom:1px solid var(--mist)}
 .rs{padding:2.4rem 1.8rem;border-right:1px solid var(--mist);position:relative;background:#fff;transition:background .25s}
 .rs:last-child{border-right:none}
@@ -440,7 +454,7 @@ a{color:inherit}
 .pricing-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:5fr 7fr;gap:5rem;align-items:flex-start}
 .pricing-side{position:sticky;top:6rem}
 .pricing-side .h2{margin-bottom:1.4rem}
-.pricing-side p{font-size:.92rem;color:var(--stone);line-height:1.8;font-weight:300;margin-bottom:1.6rem}
+.pricing-side p:not(.eyebrow){font-size:.92rem;color:var(--stone);line-height:1.8;font-weight:300;margin-bottom:1.6rem}
 .pricing-note{padding:1.2rem 1.4rem;background:#fff;border-radius:8px;border:1px solid var(--mist);font-size:.8rem;color:#6a6a58;line-height:1.7;font-weight:300}
 .pricing-note strong{color:var(--gold);font-weight:500}
 .plans{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
@@ -682,8 +696,16 @@ a{color:inherit}
         <span class="spheres-exclusive-text">Jeden ze dvou přístrojů Essenza v České republice — a je tady, v Uherském Hradišti.</span>
       </div>
     </div>
-    <div class="device-vis">
-      <img src="assets/endospheres-osetreni-koleno.webp" alt="Endospheres Therapy — ošetření terapeutkou, kompresní mikrovibrace na koleno a stehno" width="600" height="400" loading="lazy">
+    <div class="orb" aria-hidden="true">
+      <div class="orb-ring"><div class="orb-dot"></div></div>
+      <div class="orb-ring r2"><div class="orb-dot"></div></div>
+      <div class="orb-ring r3"><div class="orb-dot"></div></div>
+      <div class="orb-core">
+        <div class="orb-num">
+          Essenza
+          <span>Compressive Micro-Vibration®</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -791,6 +813,9 @@ a{color:inherit}
       <h2 class="h2" id="ritual-nadpis">Šedesát pět minut, <em>které</em> vám patří.</h2>
     </div>
     <p>Sezení vede Bc. Lenka Hanáčková. Začínáme krátkou konzultací, končíme šálkem lymfatického čaje. Mezitím se nemusíte zaobírat ničím.</p>
+  </div>
+  <div class="ritual-img">
+    <img src="assets/endospheres-osetreni-koleno.webp" alt="Endospheres Essenza ošetření — terapeutka při práci s přístrojem, Maderoterapie UH" width="1320" height="560" loading="lazy">
   </div>
   <div class="ritual-flow">
     <div class="rs">
