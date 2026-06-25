@@ -12,11 +12,14 @@
 <!-- Google tag (gtag.js) event - delayed navigation helper -->
 <script>
   function gtagSendEvent(url) {
+    var navigated = false;
     var callback = function () {
-      if (typeof url === 'string') {
+      if (!navigated && typeof url === 'string') {
+        navigated = true;
         window.location = url;
       }
     };
+    setTimeout(callback, 500);
     gtag('event', 'ads_conversion_Rezervace_sch_zky_1', {
       'event_callback': callback,
       'event_timeout': 2000,
