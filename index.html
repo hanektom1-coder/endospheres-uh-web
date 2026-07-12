@@ -1326,10 +1326,16 @@ document.querySelectorAll('.fi').forEach(function(it){
   }
 </style>
 <script>
+  function enableAnalytics() {
+    gtag('config', 'G-HM58QLNE79');
+  }
+
   (function() {
     var consent = localStorage.getItem('cookie_consent');
     if (!consent) {
       document.getElementById('cookie-banner').style.display = 'block';
+    } else if (consent === 'accept') {
+      enableAnalytics();
     }
   })();
 
@@ -1337,6 +1343,9 @@ document.querySelectorAll('.fi').forEach(function(it){
     localStorage.setItem('cookie_consent', choice);
     localStorage.setItem('cookie_consent_date', new Date().toISOString());
     document.getElementById('cookie-banner').style.display = 'none';
+    if (choice === 'accept') {
+      enableAnalytics();
+    }
   }
 </script>
 <script>
