@@ -2,12 +2,24 @@
 <html lang="cs">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10795381275"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    analytics_storage: 'denied',
+    wait_for_update: 500
+  });
+  (function() {
+    if (localStorage.getItem('cookie_consent') === 'accept') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+  })();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10795381275"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'AW-10795381275');
+  gtag('config', 'G-1WT77SL7B8');
 </script>
 <!-- Google tag (gtag.js) event - delayed navigation helper -->
 <script>
@@ -1337,6 +1349,11 @@ document.querySelectorAll('.fi').forEach(function(it){
     localStorage.setItem('cookie_consent', choice);
     localStorage.setItem('cookie_consent_date', new Date().toISOString());
     document.getElementById('cookie-banner').style.display = 'none';
+    if (choice === 'accept') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    } else {
+      gtag('consent', 'update', { analytics_storage: 'denied' });
+    }
   }
 </script>
 <script>
