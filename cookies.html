@@ -81,27 +81,29 @@ body { font-family: var(--fu); background: var(--white); color: var(--ink); over
 .cookie-table code { background: var(--pale); padding: .1rem .4rem; border-radius: 3px; font-size: .8rem; }
 
 /* FOOTER */
-footer { background: var(--off); border-top: 1px solid var(--mist); padding: 3.5rem 2rem 2rem; }
-.ft-in { max-width: 1320px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 2.6rem; border-bottom: 1px solid var(--mist); }
-.ft-brand { display: flex; align-items: center; gap: .7rem; margin-bottom: 1rem; }
-.ft-brand img { width: 34px; height: 34px; border-radius: 50%; }
-.ft-bn { font-family: var(--fd); font-size: 1rem; font-weight: 500; color: var(--ink); letter-spacing: .04em; }
-.ft-bs { font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); margin-top: 3px; font-weight: 500; }
-.ft-d { font-size: .82rem; line-height: 1.7; color: var(--stone); font-weight: 300; max-width: 300px; }
-.ft-h { font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.1rem; font-weight: 500; }
-.ft-l { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
-.ft-l a { color: #5a5a48; text-decoration: none; font-size: .84rem; font-weight: 300; transition: color .2s; }
-.ft-l a:hover { color: var(--gold); }
-.ft-bot { max-width: 1320px; margin: 1.4rem auto 0; display: flex; justify-content: space-between; font-size: .74rem; color: var(--stone); flex-wrap: wrap; gap: 1rem; }
-.ft-bot a { color: var(--stone); text-decoration: none; }
+footer { background: var(--forest); color: rgba(255,255,255,.4); padding: 4rem 0 2.5rem; }
+.ft-grid { display: grid; grid-template-columns: 2.5fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,.06); }
+.f-bname { font-family: var(--fd); font-size: 1.25rem; font-weight: 400; color: rgba(255,255,255,.88); margin-bottom: .3rem; display: flex; align-items: center; gap: 9px; }
+.f-bdot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+.f-bdesc { font-size: .79rem; line-height: 1.7; font-weight: 300; max-width: 270px; margin: .75rem 0 1.4rem; color: rgba(255,255,255,.6); }
+.f-ct { font-size: .63rem; text-transform: uppercase; letter-spacing: .18em; color: var(--gold); margin-bottom: 1.1rem; font-weight: 500; }
+.f-lnks { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
+.f-lnks a { color: rgba(255,255,255,.4); text-decoration: none; font-size: .81rem; font-weight: 300; transition: color .2s; }
+.f-lnks a:hover { color: rgba(255,255,255,.88); }
+.ft-bot { padding-top: 1.4rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: .5rem; font-size: .73rem; }
+.ft-bot a { color: rgba(255,255,255,.27); text-decoration: none; }
 .ft-bot a:hover { color: var(--gold); }
+.soc-ft { display: flex; align-items: center; gap: 1rem; margin-bottom: .8rem; }
+.soc-ft a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid rgba(255,255,255,.15); color: rgba(255,255,255,.4); text-decoration: none; transition: .25s var(--ease); }
+.soc-ft a:hover { border-color: var(--gold); color: var(--gold); }
 
 @media (max-width: 768px) {
-  .ft-in { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .ft-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
   .nav { padding: 0 1.2rem; }
   .page-hero { padding: 2.5rem 0 2rem; }
   .content { padding: 2.5rem 0 3.5rem; }
 }
+@media (max-width: 500px) { .ft-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -205,50 +207,50 @@ footer { background: var(--off); border-top: 1px solid var(--mist); padding: 3.5
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="ft-in">
-    <div>
-      <div class="ft-brand">
-        <img src="assets/logo-hires.webp" alt="Maderoterapie UH" width="34" height="34">
-        <div><div class="ft-bn">Endospheres</div><div class="ft-bs">Maderoterapie UH</div></div>
+<footer class="ft" aria-label="Zápatí stránky">
+  <div class="wrap" style="padding:0 2rem">
+    <div class="ft-grid">
+      <div>
+        <div class="f-bname"><div class="f-bdot"></div>Endospheres Essenza Therapy</div>
+        <p class="f-bdesc">Italská kompresní mikrovibrace pro lymfatickou drenáž, redukci celulitidy a tvarování těla. Studio Maderoterapie UH, Uherské Hradiště. Bc. Lenka Hanáčková.</p>
       </div>
-      <address class="ft-d" style="font-style:normal">
-        Italská kompresní mikrovibrace Essenza.<br>
-        Studio DŮM U BÍLÉHO JELENA, Masarykovo náměstí 329,<br>
-        686 01 Uherské Hradiště.<br>
-        Bc. Lenka Hanáčková.
-      </address>
+      <div>
+        <div class="f-ct">Sekce</div>
+        <ul class="f-lnks">
+          <li><a href="/#metoda">Metoda Essenza</a></li>
+          <li><a href="/#prinosy">Přínosy</a></li>
+          <li><a href="/#ritual">Průběh ošetření</a></li>
+          <li><a href="/#cenik">Ceník</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-ct">Studio</div>
+        <ul class="f-lnks">
+          <li><a href="https://maderoterapieuh.cz">maderoterapieuh.cz</a></li>
+          <li><a href="https://rezervace.maderoterapieuh.cz/" rel="noopener">Online rezervace</a></li>
+          <li><a href="https://www.instagram.com/maderoterapieuh" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/maderouh" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-ct">Kontakt</div>
+        <ul class="f-lnks">
+          <li><a href="tel:+420776323427">+420 776 323 427</a></li>
+          <li><a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a></li>
+          <li style="color:rgba(255,255,255,.22);font-size:.8rem;font-weight:300">Masarykovo náměstí 329</li>
+          <li style="color:rgba(255,255,255,.22);font-size:.8rem;font-weight:300">686 01 Uherské Hradiště, 1. patro</li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <div class="ft-h">Sekce</div>
-      <ul class="ft-l">
-        <li><a href="/#metoda">Metoda Essenza</a></li>
-        <li><a href="/#prinosy">Přínosy</a></li>
-        <li><a href="/#ritual">Průběh sezení</a></li>
-        <li><a href="/#cenik">Ceník</a></li>
-        <li><a href="/#faq">FAQ</a></li>
-      </ul>
+    <div class="ft-bot">
+      <div class="soc-ft">
+        <a href="https://www.instagram.com/maderoterapieuh" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.facebook.com/maderouh" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      </div>
+      <div>© 2026 Maderoterapie UH · Bc. Lenka Hanáčková</div>
+      <div><a href="/cookies.html">Cookies</a> · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></div>
     </div>
-    <div>
-      <div class="ft-h">Kontakt</div>
-      <ul class="ft-l">
-        <li><a href="tel:+420776323427">+420 776 323 427</a></li>
-        <li><a href="mailto:maderoterapieuh@gmail.com">maderoterapieuh@gmail.com</a></li>
-        <li><a href="https://maps.google.com/?q=Masarykovo+náměstí+329,+Uherské+Hradiště" rel="noopener">Masarykovo náměstí 329, UH</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="ft-h">Studio</div>
-      <ul class="ft-l">
-        <li><a href="https://maderoterapieuh.cz">maderoterapieuh.cz</a></li>
-        <li><a href="https://rezervace.maderoterapieuh.cz" rel="noopener">Online rezervace</a></li>
-        <li><a href="https://www.instagram.com/maderoterapieuh" rel="noopener">Instagram</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="ft-bot">
-    <div>© 2026 Maderoterapie UH · Bc. Lenka Hanáčková</div>
-    <div><a href="/cookies.html">Cookies</a> · <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a></div>
   </div>
 </footer>
 
